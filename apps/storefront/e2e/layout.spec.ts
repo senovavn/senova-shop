@@ -12,10 +12,10 @@ test.describe('app shell', () => {
 
     await page.goto('/')
     await expect(page).toHaveTitle('SENOVA · Little Things, Better Days.')
-    await expect(page.getByRole('region', { name: 'Ưu đãi' })).toContainText('Freeship đơn từ 299.000₫')
+    await expect(page.getByRole('region', { name: 'Ưu đãi', exact: true })).toContainText('Freeship đơn từ 299.000₫')
     await expect(page.getByRole('banner').getByRole('link', { name: 'Trang chủ SENOVA' })).toBeVisible()
     await expect(page.getByRole('heading', { name: 'Đang hot tuần này' })).toBeVisible()
-    await expect(page.locator('#main ol > li')).toHaveCount(8)
+    await expect(page.getByRole('list', { name: 'Đang hot tuần này' }).locator(':scope > li')).toHaveCount(8)
     await expect(page.getByRole('contentinfo')).toContainText('Mua sắm')
 
     await page.screenshot({ path: `test-results/shell-${info.project.name}.png`, fullPage: false })
@@ -26,7 +26,7 @@ test.describe('app shell', () => {
     await page.goto('/')
     const header = page.getByRole('banner')
     const catNav = header.getByRole('navigation', { name: 'Danh mục' })
-    const search = header.getByRole('searchbox', { name: 'Tìm kiếm' })
+    const search = header.getByRole('combobox', { name: 'Tìm kiếm' })
     const bottomNav = page.getByRole('navigation', { name: 'Điều hướng nhanh' })
     const menuBtn = header.getByRole('button', { name: 'Danh mục' })
 
@@ -44,7 +44,7 @@ test.describe('app shell', () => {
       await expect(catNav).toBeHidden()
       await expect(search).toBeHidden()
       await expect(bottomNav).toBeVisible()
-      await expect(bottomNav.getByRole('link', { name: 'Tìm quà' })).toBeVisible()
+      await expect(bottomNav.getByRole('button', { name: 'Tìm quà' })).toBeVisible()
     }
   })
 
@@ -74,4 +74,27 @@ test.describe('app shell', () => {
     const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`)).toEqual([])
   })
+})
+
+test('no horizontal overflow on any viewport', async ({ page }) => {
+  for (const path of ['/', '/c/qua-tang', '/p/day-chuyen-mat-the-khac-ten']) {
+    await page.goto(path)
+    // Controls and headings must stay on screen unless they live in a horizontal scroller or a hidden slide.
+    const offenders = await page.evaluate(() => {
+      const vw = document.documentElement.clientWidth
+      const inScroller = (el: Element) => {
+        for (let p = el.parentElement; p; p = p.parentElement) {
+          const ox = getComputedStyle(p).overflowX
+          if (ox === 'auto' || ox === 'scroll') return true
+          if (p.getAttribute('aria-hidden') === 'true') return true
+        }
+        return false
+      }
+      return [...document.querySelectorAll('main :is(a, button, input, select, h1, h2, h3)')]
+        .filter((el) => el.getBoundingClientRect().width > 0 && el.getBoundingClientRect().right > vw + 1 && !inScroller(el))
+        .slice(0, 3)
+        .map((el) => el.outerHTML.slice(0, 120))
+    })
+    expect(offenders, path).toEqual([])
+  }
 })
