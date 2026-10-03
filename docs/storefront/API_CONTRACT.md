@@ -7,11 +7,11 @@ Quy ước: tiền là số nguyên VND; thời gian ISO 8601 UTC; lỗi dạng 
 
 | Nhóm | Endpoint | Ghi chú |
 |---|---|---|
-| Config | `GET /config` | Theme, marquee, utilities (thứ tự, bật/tắt, badge), dịp sắp tới, ngưỡng freeship, chính sách |
-| Nội dung | `GET /banners`, `GET /stories`, `GET /collections/{slug}` | Do chủ shop quản lý trong SourceLiq |
-| Catalog | `GET /products?cat&coll&q&price_min&price_max&badge&in_stock&sort&cursor`, `GET /products/{slug}`, `GET /products/{slug}/related`, `GET /products/{slug}/bundle` | Giá + tồn trả theo biến thể (`sku`) |
+| Config | `GET /config` | Marquee, nav, footer, utilities (thứ tự, bật/tắt, badge), dịp sắp tới, ngưỡng freeship, danh mục/người nhận/dịp/ngân sách, vận chuyển (tỉnh hỏa tốc, ETA), khắc chữ, FAQ, cam kết, bộ sưu tập trang chủ, ảnh gói quà |
+| Nội dung | `GET /banners`, `GET /stories`, `GET /collections/{slug}`, `GET /vouchers`, `GET /promotions/flash` | Do chủ shop quản lý trong SourceLiq. Banner có `action` = link hoặc mở tiện ích. Flash trả `sale: null` khi không có chương trình; `ends_at` là thời điểm kết thúc thật |
+| Catalog | `GET /products?cat&coll&q&rec&occ&price_min&price_max&badge&in_stock&sort&limit&cursor` → `{items, total, next_cursor}`, `GET /products/{slug}`, `GET /products/{slug}/related`, `GET /products/{slug}/bundle` | Giá + tồn trả theo biến thể (`sku`) |
 | Tìm kiếm | `GET /search/suggest?q=` | Không dấu, tối đa 5 |
-| Finder | `GET /finder?rec&occ&budget` | Trả `count` + danh sách |
+| Finder | dùng `GET /products?rec&occ&price_min&price_max` (`total` là số món phù hợp) | Một nguồn cho số đếm và trang kết quả, luôn khớp nhau |
 | Tồn kho | `GET /inventory?skus=` | Gọi từ client để luôn mới |
 | Giỏ | `POST /carts`, `GET /carts/{id}`, `POST /carts/{id}/items`, `PATCH /carts/{id}/items/{line}`, `DELETE ...` | Dòng giỏ gồm `sku`, `qty`, `engrave?` |
 | Checkout | `POST /checkout/start` (reservation 15'), `PUT /checkout/{id}/contact`, `PUT .../address`, `GET .../shipping-options`, `PUT .../shipping`, `PUT .../gift`, `PUT .../payment`, `POST .../vouchers`, `DELETE .../vouchers/{code}`, `POST .../quote` | `quote` là nguồn sự thật cho tổng tiền |

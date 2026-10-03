@@ -59,5 +59,13 @@ pnpm contracts:gen                    # sinh lại client từ openapi
 - Next 16: `params`/`searchParams`/`cookies()` là async; `next/image` dùng `loading="eager"` + `fetchPriority="high"` thay cho `priority` (đã bỏ).
 - Header không đổi chiều cao khi cuộn (tránh CLS); hiệu ứng "co lại" làm bằng `transform` trên logo.
 
+## Ghi chú triển khai (Sprint 1)
+- Client Component đọc dữ liệu qua BFF `/api/sf/*` (allow-list GET, `src/app/api/sf/[...path]/route.ts`) bằng `sfGet` + TanStack Query; Server Component dùng `src/api/client.ts`.
+- Mở sheet/modal từ bất kỳ đâu: `openUtility(key)`, `openQuickView(product)`, `openMenu()` (`src/lib/ui-events.ts`). `UiHosts` tải lười code ActionSheet/QuickView ở lần mở đầu.
+- Trạng thái khách tạm ở trình duyệt (`src/lib/shopper.ts`: giỏ, yêu thích, voucher đã lưu, story đã xem, tỉnh, đai quà) cho tới khi có API giỏ (Sprint 2) và tài khoản (Sprint 3).
+- Banner chỉ tự chuyển sau tương tác đầu tiên (cuộn/chạm/phím): tự chuyển trước đó làm LCP bị ghi nhận lại theo từng slide. Có nút tạm dừng (WCAG 2.2.2).
+- Lighthouse CI dùng throttling thật (`throttlingMethod: devtools`, trung vị 3 lần): chế độ giả lập trên localhost coi mọi JS tải xong sớm là chặn LCP.
+- Màu chữ sao đánh giá (`rating`), tim (`heart`), nhãn cảnh báo (`alert`), chữ tối cố định trên nền sáng (`onLight`) đã thêm vào token; không dùng `pebble` cho chữ (không đạt AA).
+
 ## Next.js 16
 @AGENTS.md

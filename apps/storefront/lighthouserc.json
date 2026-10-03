@@ -3,19 +3,61 @@
     "collect": {
       "startServerCommand": "pnpm start --port 3230",
       "startServerReadyPattern": "Ready",
-      "url": ["http://localhost:3230/"],
-      "numberOfRuns": 1,
-      "settings": { "preset": "desktop", "chromeFlags": "--no-sandbox" }
+      "url": [
+        "http://localhost:3230/",
+        "http://localhost:3230/p/ly-giu-nhiet-900ml-co-quai-ong-hut",
+        "http://localhost:3230/c/qua-tang"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "chromeFlags": "--no-sandbox",
+        "throttlingMethod": "devtools"
+      }
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["warn", { "minScore": 0.9 }],
-        "categories:accessibility": ["error", { "minScore": 0.9 }],
-        "categories:seo": ["error", { "minScore": 0.9 }],
-        "categories:best-practices": ["warn", { "minScore": 0.9 }],
-        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }]
-      }
+        "categories:performance": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:accessibility": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:seo": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:best-practices": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "cumulative-layout-shift": [
+          "error",
+          {
+            "maxNumericValue": 0.1
+          }
+        ],
+        "largest-contentful-paint": [
+          "warn",
+          {
+            "maxNumericValue": 2500
+          }
+        ]
+      },
+      "aggregationMethod": "median-run"
     },
-    "upload": { "target": "filesystem", "outputDir": "./.lighthouseci" }
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci"
+    }
   }
 }

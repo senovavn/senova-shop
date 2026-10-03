@@ -5,9 +5,9 @@
     "plum": "#5A2A4F", "plumDeep": "#3E1C37", "sunbeam": "#FFC23D",
     "sage": "#9DB39A", "mist": "#C7D8E0", "lilac": "#CBB6D6", "peach": "#F2B8C6",
     "bg": "#FBF7F2", "linen": "#EFE7DE", "card": "#FFFFFF", "pebble": "#A89F98",
-    "ink": "#2B2428", "muted": "#6E6468", "line": "#E9E0D6", "ok": "#3F7D4E", "error": "#B3261E"
+    "ink": "#2B2428", "onLight": "#2B2428", "rating": "#8F6200", "heart": "#E0567A", "alert": "#C8243F", "muted": "#6E6468", "line": "#E9E0D6", "ok": "#3F7D4E", "error": "#B3261E"
   },
-  "colorDark": { "bg": "#1C181B", "linen": "#29232A", "card": "#241F23", "ink": "#F3EEEA", "muted": "#B8ADB2", "line": "#3A3237" },
+  "colorDark": { "rating": "#FFC23D", "bg": "#1C181B", "linen": "#29232A", "card": "#241F23", "ink": "#F3EEEA", "muted": "#B8ADB2", "line": "#3A3237" },
   "font": {
     "display": "Bricolage Grotesque (Google Fonts, SIL OFL) 600/700/800",
     "body": "Be Vietnam Pro (Google Fonts, SIL OFL) 400/500/600/700"

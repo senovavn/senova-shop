@@ -4,7 +4,9 @@ import { Logo } from '@/components/brand/Logo'
 import { t } from '@/i18n/t'
 import { HeaderShell } from './HeaderShell'
 import { MenuButton } from './MobileMenu'
-import { BagIcon, HeartIcon, SearchIcon, UserIcon } from './icons'
+import { CartCount, WishCount } from './HeaderCounts'
+import { BagIcon, HeartIcon, UserIcon } from './icons'
+import { SearchBox } from './SearchBox'
 
 const iconBtn = 'relative grid size-10 place-items-center rounded-chip transition-colors hover:bg-linen'
 
@@ -27,27 +29,18 @@ export function Header({ nav }: { nav: StorefrontConfig['nav'] }) {
             </Link>
           ))}
         </nav>
-        <form action="/search" role="search" className="relative ml-auto hidden max-w-[330px] flex-1 sm:block">
-          <SearchIcon className="pointer-events-none absolute top-3 left-3.5 size-[19px] text-muted" />
-          <label htmlFor="header-q" className="sr-only">{t('header.search')}</label>
-          <input
-            id="header-q"
-            name="q"
-            type="search"
-            autoComplete="off"
-            placeholder={t('header.searchPlaceholder')}
-            className="h-11 w-full rounded-chip border-[1.5px] border-line bg-card pr-4 pl-[42px] transition-[border-color,box-shadow] focus:border-plum focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--sn-plum)_12%,transparent)] focus:outline-none"
-          />
-        </form>
+        <SearchBox />
         <div className="ml-auto flex gap-0.5 sm:ml-0">
           <Link href="/account/wishlist" className={`${iconBtn} hidden sm:grid`} aria-label={t('header.wishlist')}>
             <HeartIcon className="size-[22px]" />
+            <WishCount />
           </Link>
           <Link href="/account" className={`${iconBtn} hidden sm:grid`} aria-label={t('header.account')}>
             <UserIcon className="size-[22px]" />
           </Link>
           <Link href="/cart" className={iconBtn} aria-label={t('header.cart')}>
             <BagIcon className="size-[22px]" />
+            <CartCount />
           </Link>
         </div>
       </div>

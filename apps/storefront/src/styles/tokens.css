@@ -12,6 +12,10 @@
   --sn-card: #FFFFFF;
   --sn-pebble: #A89F98;
   --sn-ink: #2B2428;
+  --sn-on-light: #2B2428;
+  --sn-rating: #8F6200;
+  --sn-heart: #E0567A;
+  --sn-alert: #C8243F;
   --sn-muted: #6E6468;
   --sn-line: #E9E0D6;
   --sn-ok: #3F7D4E;
@@ -45,6 +49,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --sn-rating: #FFC23D;
     --sn-bg: #1C181B;
     --sn-linen: #29232A;
     --sn-card: #241F23;
@@ -67,6 +72,10 @@
   --color-card: var(--sn-card);
   --color-pebble: var(--sn-pebble);
   --color-ink: var(--sn-ink);
+  --color-on-light: var(--sn-on-light);
+  --color-rating: var(--sn-rating);
+  --color-heart: var(--sn-heart);
+  --color-alert: var(--sn-alert);
   --color-muted: var(--sn-muted);
   --color-line: var(--sn-line);
   --color-ok: var(--sn-ok);

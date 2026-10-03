@@ -62,3 +62,29 @@
     scroll-behavior: auto !important;
   }
 }
+
+.sn-story-bar--run {
+  animation: sn-story-bar linear forwards;
+  transform: scaleX(0);
+}
+@keyframes sn-story-bar {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.sn-toast {
+  animation: sn-enter var(--sn-duration-base) var(--sn-ease);
+}
+
+.sn-bump {
+  animation: sn-bump 0.5s var(--sn-ease);
+}
+@keyframes sn-bump {
+  30% {
+    transform: scale(1.35);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+}

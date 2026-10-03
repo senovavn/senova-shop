@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { t } from '@/i18n/t'
+import { openUtility } from '@/lib/ui-events'
+import { CartCount } from './HeaderCounts'
 import { openMenu } from './MobileMenu'
 import { BagIcon, GiftIcon, GridIcon, HomeIcon, UserIcon } from './icons'
 
@@ -26,15 +28,16 @@ export function BottomNav() {
         <GridIcon className="size-[22px]" />
         {t('bottomNav.categories')}
       </button>
-      <Link href="/finder" className={`${item} -top-4`} aria-current={current(path.startsWith('/finder'))}>
-        <span className="grid size-[54px] place-items-center rounded-full border-4 border-bg bg-[linear-gradient(135deg,var(--sn-util-flash-from),var(--sn-util-flash-to))] text-plum-deep shadow-[0_10px_22px_-8px_color-mix(in_srgb,var(--sn-util-flash-to)_80%,transparent)]">
+      <button type="button" className={`${item} -top-4`} onClick={() => openUtility('finder')} aria-haspopup="dialog">
+        <span className="grid size-[54px] place-items-center rounded-full border-4 border-bg bg-[linear-gradient(135deg,var(--sn-util-flash-from),var(--sn-util-flash-to))] text-on-light shadow-[0_10px_22px_-8px_color-mix(in_srgb,var(--sn-util-flash-to)_80%,transparent)]">
           <GiftIcon className="size-[26px]" />
         </span>
         {t('bottomNav.finder')}
-      </Link>
+      </button>
       <Link href="/cart" className={item} aria-current={current(path.startsWith('/cart'))}>
         <BagIcon className="size-[22px]" />
         {t('bottomNav.cart')}
+        <CartCount />
       </Link>
       <Link href="/account" className={item} aria-current={current(path.startsWith('/account'))}>
         <UserIcon className="size-[22px]" />

@@ -58,6 +58,8 @@ export interface paths {
                     price_max?: number;
                     badge?: string;
                     in_stock?: boolean;
+                    rec?: string;
+                    occ?: string;
                     limit?: number;
                     sort?: "popular" | "rating" | "discount" | "price_asc" | "price_desc";
                     cursor?: string;
@@ -76,10 +78,7 @@ export interface paths {
                         [name: string]: unknown;
                     };
                     content: {
-                        "application/json": {
-                            items?: components["schemas"]["Product"][];
-                            next_cursor?: string;
-                        };
+                        "application/json": components["schemas"]["ProductPage"];
                     };
                 };
             };
@@ -127,6 +126,415 @@ export interface paths {
                         [name: string]: unknown;
                     };
                     content?: never;
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/banners": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Home banners in display order */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            items: components["schemas"]["Banner"][];
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/stories": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Story groups */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            items: components["schemas"]["Story"][];
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/vouchers": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** @description Public vouchers shown in the wallet */
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            items: components["schemas"]["Voucher"][];
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/promotions/flash": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Current flash sale, or null when none is running */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            sale: components["schemas"]["FlashSale"] | null;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/search/suggest": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query: {
+                    q: string;
+                };
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Up to 5 accent-insensitive matches */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            items: components["schemas"]["Suggestion"][];
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/inventory": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query: {
+                    /** @description Comma-separated SKUs */
+                    skus: string;
+                };
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Live stock per SKU */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            items: {
+                                sku: string;
+                                stock: number;
+                            }[];
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/products/{slug}/related": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path: {
+                    slug: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ProductList"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/products/{slug}/bundle": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path: {
+                    slug: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Frequently bought together (excludes the product itself) */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ProductList"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/collections/{slug}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path: {
+                    slug: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Collection"];
+                    };
+                };
+                /** @description Not found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/geo/provinces": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Storefront-Host": components["parameters"]["Host"];
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description 34 provinces/cities (2-level address) */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            items: {
+                                code: string;
+                                name: string;
+                            }[];
+                        };
+                    };
                 };
             };
         };
@@ -444,6 +852,78 @@ export interface components {
             message: string;
             field?: string;
         };
+        Collection: {
+            slug: string;
+            title: string;
+            description?: string;
+        };
+        Option: {
+            key: string;
+            label: string;
+        };
+        ProductPage: {
+            items: components["schemas"]["Product"][];
+            total: number;
+            next_cursor?: string;
+        };
+        ProductList: {
+            items: components["schemas"]["Product"][];
+        };
+        Banner: {
+            id: string;
+            title: string;
+            subtitle?: string;
+            cta_label: string;
+            action: components["schemas"]["Action"];
+            tone_from: string;
+            tone_to: string;
+            /** Format: uri-reference */
+            image?: string;
+        };
+        Action: {
+            /** @enum {string} */
+            type: "link" | "utility";
+            value: string;
+        };
+        Story: {
+            id: string;
+            label: string;
+            items: {
+                product: components["schemas"]["Product"];
+                caption: string;
+                /** Format: uri-reference */
+                image: string;
+            }[];
+        };
+        Voucher: {
+            code: string;
+            label: string;
+            /** @enum {string} */
+            kind: "percent" | "amount" | "shipping";
+            value?: number;
+            max_discount?: components["schemas"]["Money"];
+            min_subtotal: components["schemas"]["Money"];
+            /** @description Ticket stub text, e.g. 10% */
+            short: string;
+            /** Format: date-time */
+            ends_at?: string;
+        };
+        FlashSale: {
+            id: string;
+            /** Format: date-time */
+            ends_at: string;
+            items: {
+                product: components["schemas"]["Product"];
+                claimed_pct: number;
+            }[];
+        };
+        Suggestion: {
+            slug: string;
+            name: string;
+            price: components["schemas"]["Money"];
+            /** Format: uri-reference */
+            image: string;
+        };
         NavLink: {
             label: string;
             href: string;
@@ -483,6 +963,51 @@ export interface components {
             free_ship_threshold: components["schemas"]["Money"];
             utilities: components["schemas"]["Utility"][];
             next_occasion?: components["schemas"]["Occasion"];
+            categories?: components["schemas"]["Option"][];
+            recipients?: components["schemas"]["Option"][];
+            occasions?: components["schemas"]["Option"][];
+            budgets?: {
+                key: string;
+                label: string;
+                min: components["schemas"]["Money"];
+                max: components["schemas"]["Money"];
+            }[];
+            gift_wrap_occasions?: string[];
+            /** Format: uri-reference */
+            gift_wrap_image?: string;
+            home_collections?: {
+                slug: string;
+                title: string;
+                /** @description Token color name, e.g. sunbeam */
+                tone: string;
+                /** Format: uri-reference */
+                image: string;
+            }[];
+            shipping?: {
+                express: {
+                    provinces: string[];
+                    fee: components["schemas"]["Money"];
+                    /** @example 16:00 */
+                    cutoff: string;
+                };
+                standard: {
+                    carriers: string[];
+                    city_days: number[];
+                    other_days: number[];
+                };
+            };
+            engrave?: {
+                max_length?: number;
+                extra_days?: number;
+            };
+            faq?: {
+                q: string;
+                a: string;
+            }[];
+            trust?: {
+                title: string;
+                body: string;
+            }[];
         };
     };
     responses: never;

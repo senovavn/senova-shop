@@ -6,6 +6,9 @@ import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { Marquee } from '@/components/layout/Marquee'
 import { MobileMenu } from '@/components/layout/MobileMenu'
+import { UiHosts } from '@/components/layout/UiHosts'
+import { Providers } from '@/components/providers/Providers'
+import { Toaster } from '@/components/ui/toast'
 import { t } from '@/i18n/t'
 import tokens from '@senova/tokens/senova.json'
 import './globals.css'
@@ -57,12 +60,16 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         >
           {t('a11y.skip')}
         </a>
-        <Marquee items={config.marquee} />
-        <Header nav={config.nav} />
-        <main id="main">{children}</main>
-        <Footer footer={config.footer} />
-        <BottomNav />
-        <MobileMenu nav={config.nav} />
+        <Providers>
+          <Marquee items={config.marquee} />
+          <Header nav={config.nav} />
+          <main id="main">{children}</main>
+          <Footer footer={config.footer} />
+          <BottomNav />
+          <MobileMenu nav={config.nav} />
+          <UiHosts config={config} />
+          <Toaster />
+        </Providers>
       </body>
     </html>
   )

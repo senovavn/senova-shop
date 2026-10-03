@@ -54,7 +54,7 @@ Tổng tiền chỉ lấy từ POST /checkout/{id}/quote. Viết e2e Playwright 
 | Sprint | Trạng thái | Ghi chú |
 |---|---|---|
 | 0 | Xong (chờ duyệt PR) | Next.js 16.3 + Tailwind 4 từ token; mock MSW `getResponse` (không vá fetch toàn cục); unit 17/17, e2e 14/14 ở 1440/820/390; Lighthouse desktop 98/100/96/100, mobile 96/100/96/100 (LCP mobile 2,8 s do ảnh SVG demo có blur, xử lý ở Sprint 1). Header giữ chiều cao cố định khi cuộn (chỉ đổ bóng + thu logo bằng transform) để CLS = 0. |
-| 1 | | |
+| 1 | Xong (chờ duyệt PR) | Trang chủ super-app (10 tiện ích + ActionSheet, banner, story, Dành cho bạn, voucher, tìm quà, hot, flash, bộ sưu tập), danh mục/bộ sưu tập/tìm kiếm/gợi ý quà + bộ lọc, trang sản phẩm (gallery, biến thể, khắc chữ, tồn kho trực tiếp, ETA, tab, mua kèm, JSON-LD), xem nhanh. Unit 34/34, e2e 81/81 (1440/820/390). Lighthouse mobile (throttling thật, trung vị 3 lần): / 97, /p 95–98, /c 95–96; A11y 100, SEO 100, CLS ≈ 0; LCP /p và /c ≈ 2,7 s (ảnh SVG demo). Giỏ hàng tạm lưu trên trình duyệt, Sprint 2 chuyển sang API. Chat tắt đến Sprint 5. |
 | 2 | | |
 | 3 | | |
 | 4 | | |

@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
 import { BottomNav } from './BottomNav'
-import { OPEN_MENU_EVENT } from './MobileMenu'
 
 const pathname = vi.hoisted(() => ({ value: '/' }))
 vi.mock('next/navigation', () => ({ usePathname: () => pathname.value }))
@@ -11,7 +10,8 @@ describe('BottomNav', () => {
   it('shows the five tabs with the gift finder in the middle', () => {
     render(<BottomNav />)
     const labels = screen.getAllByRole('link').map((a) => a.textContent)
-    expect(labels).toEqual(['Trang chủ', 'Tìm quà', 'Giỏ hàng', 'Tài khoản'])
+    expect(labels).toEqual(['Trang chủ', 'Giỏ hàng', 'Tài khoản'])
+    expect(screen.getByRole('button', { name: 'Tìm quà' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Danh mục' })).toBeInTheDocument()
   })
 
@@ -22,9 +22,17 @@ describe('BottomNav', () => {
     expect(screen.getByRole('link', { name: 'Trang chủ' })).not.toHaveAttribute('aria-current')
   })
 
+  it('opens the gift finder sheet', async () => {
+    const onOpen = vi.fn()
+    window.addEventListener('senova:utility', onOpen)
+    render(<BottomNav />)
+    await userEvent.click(screen.getByRole('button', { name: 'Tìm quà' }))
+    expect((onOpen.mock.calls[0][0] as CustomEvent).detail).toBe('finder')
+  })
+
   it('opens the category menu', async () => {
     const onOpen = vi.fn()
-    window.addEventListener(OPEN_MENU_EVENT, onOpen)
+    window.addEventListener('senova:menu', onOpen)
     render(<BottomNav />)
     await userEvent.click(screen.getByRole('button', { name: 'Danh mục' }))
     expect(onOpen).toHaveBeenCalledTimes(1)
