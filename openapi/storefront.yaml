@@ -1,5 +1,5 @@
 openapi: 3.1.0
-info: {title: SourceLiq Storefront API, version: 0.2.0, description: "Hợp đồng khởi điểm cho website SENOVA. Mở rộng theo docs/storefront/API_CONTRACT.md."}
+info: {title: SourceLiq Storefront API, version: 0.3.0, description: "Hợp đồng khởi điểm cho website SENOVA. Mở rộng theo docs/storefront/API_CONTRACT.md."}
 servers: [{url: https://api.sourceliq.vn/v1/storefront}]
 components:
   parameters:
@@ -40,6 +40,50 @@ components:
       type: object
       properties: {code: {type: string}, status: {type: string, enum: [placed, confirmed, packing, handed_over, in_transit, delivered, cancelled]}, payment_status: {type: string, enum: [cod, pending, paid, failed, refunded]}, carrier: {type: string}, tracking_no: {type: string}, totals: {$ref: '#/components/schemas/Quote'}}
     Error: {type: object, required: [code, message], properties: {code: {type: string}, message: {type: string}, field: {type: string}}}
+    Collection: {type: object, required: [slug, title], properties: {slug: {type: string}, title: {type: string}, description: {type: string}}}
+    Option: {type: object, required: [key, label], properties: {key: {type: string}, label: {type: string}}}
+    ProductPage: {type: object, required: [items, total], properties: {items: {type: array, items: {$ref: '#/components/schemas/Product'}}, total: {type: integer}, next_cursor: {type: string}}}
+    ProductList: {type: object, required: [items], properties: {items: {type: array, items: {$ref: '#/components/schemas/Product'}}}}
+    Banner:
+      type: object
+      required: [id, title, cta_label, action, tone_from, tone_to]
+      properties:
+        id: {type: string}
+        title: {type: string}
+        subtitle: {type: string}
+        cta_label: {type: string}
+        action: {$ref: '#/components/schemas/Action'}
+        tone_from: {type: string}
+        tone_to: {type: string}
+        image: {type: string, format: uri-reference}
+    Action: {type: object, required: [type, value], properties: {type: {type: string, enum: [link, utility]}, value: {type: string}}}
+    Story:
+      type: object
+      required: [id, label, items]
+      properties:
+        id: {type: string}
+        label: {type: string}
+        items: {type: array, items: {type: object, required: [product, caption, image], properties: {product: {$ref: '#/components/schemas/Product'}, caption: {type: string}, image: {type: string, format: uri-reference}}}}
+    Voucher:
+      type: object
+      required: [code, label, kind, min_subtotal, short]
+      properties:
+        code: {type: string}
+        label: {type: string}
+        kind: {type: string, enum: [percent, amount, shipping]}
+        value: {type: integer}
+        max_discount: {$ref: '#/components/schemas/Money'}
+        min_subtotal: {$ref: '#/components/schemas/Money'}
+        short: {type: string, description: 'Ticket stub text, e.g. 10%'}
+        ends_at: {type: string, format: date-time}
+    FlashSale:
+      type: object
+      required: [id, ends_at, items]
+      properties:
+        id: {type: string}
+        ends_at: {type: string, format: date-time}
+        items: {type: array, items: {type: object, required: [product, claimed_pct], properties: {product: {$ref: '#/components/schemas/Product'}, claimed_pct: {type: integer, minimum: 0, maximum: 100}}}}
+    Suggestion: {type: object, required: [slug, name, price, image], properties: {slug: {type: string}, name: {type: string}, price: {$ref: '#/components/schemas/Money'}, image: {type: string, format: uri-reference}}}
     NavLink: {type: object, required: [label, href], properties: {label: {type: string}, href: {type: string}, highlight: {type: boolean}}}
     Utility:
       type: object
@@ -63,13 +107,95 @@ components:
         free_ship_threshold: {$ref: '#/components/schemas/Money'}
         utilities: {type: array, items: {$ref: '#/components/schemas/Utility'}}
         next_occasion: {$ref: '#/components/schemas/Occasion'}
+        categories: {type: array, items: {$ref: '#/components/schemas/Option'}}
+        recipients: {type: array, items: {$ref: '#/components/schemas/Option'}}
+        occasions: {type: array, items: {$ref: '#/components/schemas/Option'}}
+        budgets: {type: array, items: {type: object, required: [key, label, min, max], properties: {key: {type: string}, label: {type: string}, min: {$ref: '#/components/schemas/Money'}, max: {$ref: '#/components/schemas/Money'}}}}
+        gift_wrap_occasions: {type: array, items: {type: string}}
+        gift_wrap_image: {type: string, format: uri-reference}
+        home_collections: {type: array, items: {type: object, required: [slug, title, tone, image], properties: {slug: {type: string}, title: {type: string}, tone: {type: string, description: 'Token color name, e.g. sunbeam'}, image: {type: string, format: uri-reference}}}}
+        shipping:
+          type: object
+          required: [express, standard]
+          properties:
+            express: {type: object, required: [provinces, fee, cutoff], properties: {provinces: {type: array, items: {type: string}}, fee: {$ref: '#/components/schemas/Money'}, cutoff: {type: string, example: '16:00'}}}
+            standard: {type: object, required: [carriers, city_days, other_days], properties: {carriers: {type: array, items: {type: string}}, city_days: {type: array, items: {type: integer}, minItems: 2, maxItems: 2}, other_days: {type: array, items: {type: integer}, minItems: 2, maxItems: 2}}}
+        engrave: {type: object, properties: {max_length: {type: integer}, extra_days: {type: integer}}}
+        faq: {type: array, items: {type: object, required: [q, a], properties: {q: {type: string}, a: {type: string}}}}
+        trust: {type: array, items: {type: object, required: [title, body], properties: {title: {type: string}, body: {type: string}}}}
 paths:
   /config: {get: {parameters: [{$ref: '#/components/parameters/Host'}], responses: {'200': {description: Storefront config, content: {application/json: {schema: {$ref: '#/components/schemas/Config'}}}}}}}
   /products:
     get:
-      parameters: [{$ref: '#/components/parameters/Host'}, {name: cat, in: query, schema: {type: string}}, {name: coll, in: query, schema: {type: string}}, {name: q, in: query, schema: {type: string}}, {name: price_min, in: query, schema: {type: integer}}, {name: price_max, in: query, schema: {type: integer}}, {name: badge, in: query, schema: {type: string}}, {name: in_stock, in: query, schema: {type: boolean}}, {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 60}}, {name: sort, in: query, schema: {type: string, enum: [popular, rating, discount, price_asc, price_desc]}}, {name: cursor, in: query, schema: {type: string}}]
-      responses: {'200': {description: OK, content: {application/json: {schema: {type: object, properties: {items: {type: array, items: {$ref: '#/components/schemas/Product'}}, next_cursor: {type: string}}}}}}}
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: cat, in: query, schema: {type: string}}, {name: coll, in: query, schema: {type: string}}, {name: q, in: query, schema: {type: string}}, {name: price_min, in: query, schema: {type: integer}}, {name: price_max, in: query, schema: {type: integer}}, {name: badge, in: query, schema: {type: string}}, {name: in_stock, in: query, schema: {type: boolean}}, {name: rec, in: query, schema: {type: string}}, {name: occ, in: query, schema: {type: string}}, {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 60}}, {name: sort, in: query, schema: {type: string, enum: [popular, rating, discount, price_asc, price_desc]}}, {name: cursor, in: query, schema: {type: string}}]
+      responses: {'200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/ProductPage'}}}}}
   /products/{slug}: {get: {parameters: [{$ref: '#/components/parameters/Host'}, {name: slug, in: path, required: true, schema: {type: string}}], responses: {'200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/Product'}}}}, '404': {description: Not found}}}}
+  /banners:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}]
+      responses:
+        '200':
+          description: Home banners in display order
+          content: {application/json: {schema: {type: object, required: [items], properties: {items: {type: array, items: {$ref: '#/components/schemas/Banner'}}}}}}
+  /stories:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}]
+      responses:
+        '200':
+          description: Story groups
+          content: {application/json: {schema: {type: object, required: [items], properties: {items: {type: array, items: {$ref: '#/components/schemas/Story'}}}}}}
+  /vouchers:
+    get:
+      description: Public vouchers shown in the wallet
+      parameters: [{$ref: '#/components/parameters/Host'}]
+      responses:
+        '200':
+          description: OK
+          content: {application/json: {schema: {type: object, required: [items], properties: {items: {type: array, items: {$ref: '#/components/schemas/Voucher'}}}}}}
+  /promotions/flash:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}]
+      responses:
+        '200':
+          description: Current flash sale, or null when none is running
+          content: {application/json: {schema: {type: object, required: [sale], properties: {sale: {anyOf: [{$ref: '#/components/schemas/FlashSale'}, {type: 'null'}]}}}}}
+  /search/suggest:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: q, in: query, required: true, schema: {type: string}}]
+      responses:
+        '200':
+          description: Up to 5 accent-insensitive matches
+          content: {application/json: {schema: {type: object, required: [items], properties: {items: {type: array, maxItems: 5, items: {$ref: '#/components/schemas/Suggestion'}}}}}}
+  /inventory:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: skus, in: query, required: true, description: Comma-separated SKUs, schema: {type: string}}]
+      responses:
+        '200':
+          description: Live stock per SKU
+          content: {application/json: {schema: {type: object, required: [items], properties: {items: {type: array, items: {type: object, required: [sku, stock], properties: {sku: {type: string}, stock: {type: integer}}}}}}}}
+  /products/{slug}/related:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: slug, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/ProductList'}}}}
+  /products/{slug}/bundle:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: slug, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: Frequently bought together (excludes the product itself), content: {application/json: {schema: {$ref: '#/components/schemas/ProductList'}}}}
+  /collections/{slug}:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: slug, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/Collection'}}}}
+        '404': {description: Not found}
+  /geo/provinces:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}]
+      responses:
+        '200':
+          description: 34 provinces/cities (2-level address)
+          content: {application/json: {schema: {type: object, required: [items], properties: {items: {type: array, items: {type: object, required: [code, name], properties: {code: {type: string}, name: {type: string}}}}}}}}
   /carts/{id}/items:
     post:
       parameters: [{$ref: '#/components/parameters/Host'}, {name: id, in: path, required: true, schema: {type: string}}]
