@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import type { StorefrontConfig } from '@/api/client'
 import { t } from '@/i18n/t'
+import { dispatchUi, useUiEvent } from '@/lib/ui-events'
 import { CloseIcon, MenuIcon } from './icons'
 
-export const OPEN_MENU_EVENT = 'senova:open-menu'
-export const openMenu = () => window.dispatchEvent(new Event(OPEN_MENU_EVENT))
+export const openMenu = () => dispatchUi('menu', undefined)
 
 export function MenuButton({ className }: { className?: string }) {
   return (
@@ -20,11 +20,7 @@ export function MenuButton({ className }: { className?: string }) {
 /** Category menu for phone/tablet. Native <dialog>: focus trap, Esc and backdrop close come for free. */
 export function MobileMenu({ nav }: { nav: StorefrontConfig['nav'] }) {
   const ref = useRef<HTMLDialogElement>(null)
-  useEffect(() => {
-    const open = () => ref.current?.showModal()
-    window.addEventListener(OPEN_MENU_EVENT, open)
-    return () => window.removeEventListener(OPEN_MENU_EVENT, open)
-  }, [])
+  useUiEvent('menu', useCallback(() => ref.current?.showModal(), []))
   const close = () => ref.current?.close()
   return (
     <dialog
