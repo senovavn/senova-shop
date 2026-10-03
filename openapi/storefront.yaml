@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info: {title: SourceLiq Storefront API, version: 0.1.0, description: "Hợp đồng khởi điểm cho website SENOVA. Mở rộng theo docs/storefront/API_CONTRACT.md."}
+servers: [{url: https://api.sourceliq.vn/v1/storefront}]
+components:
+  parameters:
+    Host: {name: X-Storefront-Host, in: header, required: true, schema: {type: string, example: senovagifts.com}}
+    Idem: {name: Idempotency-Key, in: header, required: true, schema: {type: string}}
+  schemas:
+    Money: {type: integer, description: VND}
+    Variant:
+      type: object
+      required: [sku, name, price, stock, images]
+      properties: {sku: {type: string}, name: {type: string}, hex: {type: string}, price: {$ref: '#/components/schemas/Money'}, compare_at: {$ref: '#/components/schemas/Money'}, stock: {type: integer}, images: {type: array, items: {type: string, format: uri}}}
+    Product:
+      type: object
+      required: [id, slug, name, category, variants]
+      properties:
+        id: {type: string}
+        slug: {type: string}
+        name: {type: string}
+        name_en: {type: string}
+        category: {type: string}
+        badge: {type: string, enum: [SENOVA PICK, NEW FIND, GIFT READY, MOST LOVED, LIMITED, HIDDEN GEM]}
+        highlights: {type: array, items: {type: string}}
+        description: {type: string}
+        why_gift: {type: string}
+        specs: {type: array, items: {type: object, properties: {label: {type: string}, value: {type: string}}}}
+        recipients: {type: array, items: {type: string}}
+        occasions: {type: array, items: {type: string}}
+        engravable: {type: boolean}
+        rating: {type: number}
+        review_count: {type: integer}
+        sold_count: {type: integer}
+        variants: {type: array, items: {$ref: '#/components/schemas/Variant'}}
+    CartLine: {type: object, required: [sku, qty], properties: {id: {type: string}, sku: {type: string}, qty: {type: integer, minimum: 1}, engrave: {type: string, maxLength: 8}}}
+    Quote:
+      type: object
+      properties: {subtotal: {$ref: '#/components/schemas/Money'}, discount: {$ref: '#/components/schemas/Money'}, payment_discount: {$ref: '#/components/schemas/Money'}, shipping: {$ref: '#/components/schemas/Money'}, total: {$ref: '#/components/schemas/Money'}, applied_vouchers: {type: array, items: {type: string}}, warnings: {type: array, items: {type: string}}}
+    Order:
+      type: object
+      properties: {code: {type: string}, status: {type: string, enum: [placed, confirmed, packing, handed_over, in_transit, delivered, cancelled]}, payment_status: {type: string, enum: [cod, pending, paid, failed, refunded]}, carrier: {type: string}, tracking_no: {type: string}, totals: {$ref: '#/components/schemas/Quote'}}
+    Error: {type: object, required: [code, message], properties: {code: {type: string}, message: {type: string}, field: {type: string}}}
+paths:
+  /config: {get: {parameters: [{$ref: '#/components/parameters/Host'}], responses: {'200': {description: Storefront config}}}}
+  /products:
+    get:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: cat, in: query, schema: {type: string}}, {name: q, in: query, schema: {type: string}}, {name: sort, in: query, schema: {type: string, enum: [popular, rating, discount, price_asc, price_desc]}}, {name: cursor, in: query, schema: {type: string}}]
+      responses: {'200': {description: OK, content: {application/json: {schema: {type: object, properties: {items: {type: array, items: {$ref: '#/components/schemas/Product'}}, next_cursor: {type: string}}}}}}}
+  /products/{slug}: {get: {parameters: [{$ref: '#/components/parameters/Host'}, {name: slug, in: path, required: true, schema: {type: string}}], responses: {'200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/Product'}}}}, '404': {description: Not found}}}}
+  /carts/{id}/items:
+    post:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: id, in: path, required: true, schema: {type: string}}]
+      requestBody: {content: {application/json: {schema: {$ref: '#/components/schemas/CartLine'}}}}
+      responses: {'200': {description: Cart}, '409': {description: Out of stock, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}}
+  /checkout/{id}/quote: {post: {parameters: [{$ref: '#/components/parameters/Host'}, {name: id, in: path, required: true, schema: {type: string}}], responses: {'200': {description: Quote, content: {application/json: {schema: {$ref: '#/components/schemas/Quote'}}}}}}}
+  /orders:
+    post:
+      parameters: [{$ref: '#/components/parameters/Host'}, {$ref: '#/components/parameters/Idem'}]
+      requestBody: {content: {application/json: {schema: {type: object, required: [checkout_id], properties: {checkout_id: {type: string}}}}}}
+      responses: {'201': {description: Created, content: {application/json: {schema: {type: object, properties: {code: {type: string}, access_token: {type: string}}}}}}, '409': {description: Stock or price changed}}
+  /orders/{code}/payments:
+    post:
+      parameters: [{$ref: '#/components/parameters/Host'}, {$ref: '#/components/parameters/Idem'}, {name: code, in: path, required: true, schema: {type: string}}]
+      requestBody: {content: {application/json: {schema: {type: object, properties: {method: {type: string, enum: [vietqr, zalopay, momo, vnpay, card]}}}}}}
+      responses: {'200': {description: Payment intent, content: {application/json: {schema: {type: object, properties: {redirect_url: {type: string}, qr_payload: {type: string}, expires_at: {type: string, format: date-time}}}}}}}
+  /chat/sessions/{id}/messages:
+    post:
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: id, in: path, required: true, schema: {type: string}}]
+      requestBody: {content: {application/json: {schema: {type: object, properties: {text: {type: string, maxLength: 1000}}}}}}
+      responses: {'200': {description: SSE stream of {reply, product_ids, actions}}}

@@ -1,0 +1,23 @@
+{
+  "brand": "SENOVA",
+  "tagline": "Little Things, Better Days.",
+  "color": {
+    "plum": "#5A2A4F", "plumDeep": "#3E1C37", "sunbeam": "#FFC23D",
+    "sage": "#9DB39A", "mist": "#C7D8E0", "lilac": "#CBB6D6", "peach": "#F2B8C6",
+    "bg": "#FBF7F2", "linen": "#EFE7DE", "card": "#FFFFFF", "pebble": "#A89F98",
+    "ink": "#2B2428", "muted": "#6E6468", "line": "#E9E0D6", "ok": "#3F7D4E", "error": "#B3261E"
+  },
+  "colorDark": { "bg": "#1C181B", "linen": "#29232A", "card": "#241F23", "ink": "#F3EEEA", "muted": "#B8ADB2", "line": "#3A3237" },
+  "font": {
+    "display": "Bricolage Grotesque (Google Fonts, SIL OFL) 600/700/800",
+    "body": "Be Vietnam Pro (Google Fonts, SIL OFL) 400/500/600/700"
+  },
+  "radius": { "chip": 999, "card": 22, "panel": 24, "sheet": 28, "icon": 18 },
+  "motion": { "ease": "cubic-bezier(.2,.8,.2,1)", "fast": "150ms", "base": "300ms", "slow": "450ms", "respectReducedMotion": true },
+  "breakpoints": { "phone": "<640", "tablet": "640-1023", "desktop": ">=1024" },
+  "utilityGradients": {
+    "event": ["#FF7A90", "#E0445C"], "flash": ["#FFC23D", "#F59E0B"], "voucher": ["#A78BFA", "#7C3AED"],
+    "freeship": ["#5EC2A8", "#2F9E82"], "engrave": ["#7DB3D9", "#3C7FB5"], "express": ["#FF9F6E", "#E86A2E"],
+    "wrap": ["#CBB6D6", "#8E6AA8"], "finder": ["#7A3A6A", "#5A2A4F"], "track": ["#9DB39A", "#6E8F68"], "chat": ["#60A5FA", "#2563EB"]
+  }
+}

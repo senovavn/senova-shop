@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://senovagifts.com/sitemap.xml

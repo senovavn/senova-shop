@@ -1,0 +1,1958 @@
+{
+ "currency": "VND",
+ "note": "Dữ liệu demo từ prototype v3. Giá, tồn kho, đánh giá là minh họa.",
+ "products": [
+  {
+   "id": "sn-001",
+   "slug": "ly-giu-nhiet-900ml-co-quai-ong-hut",
+   "name": "Ly giữ nhiệt 900ml có quai & ống hút",
+   "en": "900ml insulated tumbler",
+   "cat": "nha-cua",
+   "price": 289000,
+   "compare": 359000,
+   "badge": "MOST LOVED",
+   "rec": [
+    "ban-than",
+    "dong-nghiep",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "cam-on",
+    "tu-thuong"
+   ],
+   "rating": 4.9,
+   "reviews": 412,
+   "hl": [
+    "Giữ lạnh 24 giờ, giữ nóng 8 giờ",
+    "Quai cầm chắc, vừa hộc để ly ô tô",
+    "Nắp xoay chống tràn, kèm ống hút inox"
+   ],
+   "desc": "Ly giữ nhiệt dung tích lớn, thứ được dùng mỗi ngày nên luôn là món quà thiết thực. Thành ly 2 lớp inox 304, sơn tĩnh điện mờ không bám vân tay.",
+   "specs": [
+    [
+     "Dung tích",
+     "900 ml"
+    ],
+    [
+     "Chất liệu",
+     "Inox 304 hai lớp"
+    ],
+    [
+     "Giữ nhiệt",
+     "Lạnh 24h · Nóng 8h"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Quà “dùng tới mòn”: tặng đồng nghiệp, bạn thân hay chính mình đều hợp.",
+   "engrave": false,
+   "sold": 2472,
+   "variants": [
+    {
+     "sku": "SN-001-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 32,
+     "images": [
+      "images/sn-001-sage-1.svg",
+      "images/sn-001-sage-2.svg",
+      "images/sn-001-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-001-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 18,
+     "images": [
+      "images/sn-001-lilac-1.svg",
+      "images/sn-001-lilac-2.svg",
+      "images/sn-001-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-001-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 7,
+     "images": [
+      "images/sn-001-hong-ao-1.svg",
+      "images/sn-001-hong-ao-2.svg",
+      "images/sn-001-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-001-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 0,
+     "images": [
+      "images/sn-001-kem-1.svg",
+      "images/sn-001-kem-2.svg",
+      "images/sn-001-kem-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-002",
+   "slug": "day-eo-ien-thoai-hat-charm",
+   "name": "Dây đeo điện thoại hạt charm",
+   "en": "Beaded phone charm strap",
+   "cat": "phu-kien",
+   "price": 129000,
+   "compare": null,
+   "badge": "NEW FIND",
+   "rec": [
+    "ban-than",
+    "ban-be",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "vi-muon-tang",
+    "sinh-nhat"
+   ],
+   "rating": 4.8,
+   "reviews": 268,
+   "hl": [
+    "Kèm miếng đệm luồn dưới ốp, hợp mọi điện thoại",
+    "Hạt acrylic + ngọc trai nhân tạo, dây dù bền",
+    "Dài 22 cm, đeo tay hoặc treo túi"
+   ],
+   "desc": "Phong trào trang trí điện thoại bằng charm đang lan rộng; dây hạt pastel kèm tia sáng giúp điện thoại có “cá tính” mà không cần đổi ốp.",
+   "specs": [
+    [
+     "Chiều dài",
+     "22 cm"
+    ],
+    [
+     "Chất liệu",
+     "Acrylic, ngọc trai nhân tạo, dây dù"
+    ],
+    [
+     "Tương thích",
+     "Mọi điện thoại có ốp"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Giá vừa túi, dễ phối, tặng theo cặp bạn thân rất xinh.",
+   "engrave": false,
+   "sold": 1625,
+   "variants": [
+    {
+     "sku": "SN-002-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 18,
+     "images": [
+      "images/sn-002-lilac-1.svg",
+      "images/sn-002-lilac-2.svg",
+      "images/sn-002-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-002-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 7,
+     "images": [
+      "images/sn-002-mist-1.svg",
+      "images/sn-002-mist-2.svg",
+      "images/sn-002-mist-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-002-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 0,
+     "images": [
+      "images/sn-002-hong-ao-1.svg",
+      "images/sn-002-hong-ao-2.svg",
+      "images/sn-002-hong-ao-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-003",
+   "slug": "moc-treo-tui-may-con-len-moc",
+   "name": "Móc treo túi Mây con len móc",
+   "en": "Crochet cloud bag charm",
+   "cat": "phu-kien",
+   "price": 149000,
+   "compare": null,
+   "badge": "SENOVA PICK",
+   "rec": [
+    "ban-than",
+    "ban-be",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "vi-muon-tang"
+   ],
+   "rating": 4.9,
+   "reviews": 187,
+   "hl": [
+    "Móc tay từng chiếc, không chiếc nào giống hệt nhau",
+    "Khoen kim loại chắc, treo túi, balo, chìa khóa",
+    "Nhân vật “Mây con” độc quyền SENOVA"
+   ],
+   "desc": "Len móc thủ công đang là xu hướng quà tặng nhờ cảm giác ấm và “có câu chuyện”. Mây con làm từ sợi cotton sữa mềm, nhồi bông đàn hồi.",
+   "specs": [
+    [
+     "Kích thước",
+     "9 × 7 cm"
+    ],
+    [
+     "Chất liệu",
+     "Sợi cotton sữa, bông PP"
+    ],
+    [
+     "Làm thủ công",
+     "Có"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Mỗi chiếc là duy nhất, rất hợp làm quà “vì muốn tặng thôi”.",
+   "engrave": false,
+   "sold": 1156,
+   "variants": [
+    {
+     "sku": "SN-003-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 7,
+     "images": [
+      "images/sn-003-hong-ao-1.svg",
+      "images/sn-003-hong-ao-2.svg",
+      "images/sn-003-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-003-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 0,
+     "images": [
+      "images/sn-003-mist-1.svg",
+      "images/sn-003-mist-2.svg",
+      "images/sn-003-mist-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-003-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 25,
+     "images": [
+      "images/sn-003-sage-1.svg",
+      "images/sn-003-sage-2.svg",
+      "images/sn-003-sage-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-004",
+   "slug": "may-khuech-tan-tinh-dau-mini",
+   "name": "Máy khuếch tán tinh dầu mini",
+   "en": "Mini aroma diffuser",
+   "cat": "nha-cua",
+   "price": 359000,
+   "compare": 429000,
+   "badge": "GIFT READY",
+   "rec": [
+    "gia-dinh",
+    "dong-nghiep",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "cam-on",
+    "ky-niem",
+    "tu-thuong"
+   ],
+   "rating": 4.8,
+   "reviews": 233,
+   "hl": [
+    "Phun sương siêu âm êm, đèn ngủ ánh vàng",
+    "Tự ngắt khi hết nước, hẹn giờ 1–3–6 giờ",
+    "Tặng kèm 1 lọ tinh dầu 10 ml"
+   ],
+   "desc": "Khuếch tán tinh dầu đang được Gen Z và millennials ưa chuộng để thư giãn ở phòng ngủ, bàn làm việc. Đế giả gỗ ấm, dung tích 120 ml.",
+   "specs": [
+    [
+     "Dung tích",
+     "120 ml"
+    ],
+    [
+     "Nguồn",
+     "USB-C 5V"
+    ],
+    [
+     "Hẹn giờ",
+     "1 / 3 / 6 giờ"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Món quà “chữa lành” cho người hay làm việc khuya.",
+   "engrave": false,
+   "sold": 1449,
+   "variants": [
+    {
+     "sku": "SN-004-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 12,
+     "images": [
+      "images/sn-004-mist-1.svg",
+      "images/sn-004-mist-2.svg",
+      "images/sn-004-mist-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-004-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 25,
+     "images": [
+      "images/sn-004-sage-1.svg",
+      "images/sn-004-sage-2.svg",
+      "images/sn-004-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-004-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 4,
+     "images": [
+      "images/sn-004-kem-1.svg",
+      "images/sn-004-kem-2.svg",
+      "images/sn-004-kem-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-005",
+   "slug": "en-ham-nen-kieu-co-ien",
+   "name": "Đèn hâm nến kiểu cổ điển",
+   "en": "Vintage candle warmer lamp",
+   "cat": "nha-cua",
+   "price": 459000,
+   "compare": null,
+   "badge": "HIDDEN GEM",
+   "rec": [
+    "gia-dinh",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "ky-niem",
+    "cam-on"
+   ],
+   "rating": 4.9,
+   "reviews": 96,
+   "hl": [
+    "Làm tan sáp từ trên xuống, tỏa hương không cần lửa",
+    "Chỉnh độ sáng, hẹn giờ tắt",
+    "Dáng đèn bàn cổ điển, trang trí đẹp cả khi tắt"
+   ],
+   "desc": "Đèn hâm nến dáng đèn bàn cổ điển đang là xu hướng trang trí nhà “cũ mà mới”. An toàn hơn đốt nến và giúp nến dùng lâu hơn.",
+   "specs": [
+    [
+     "Chiều cao",
+     "32 cm"
+    ],
+    [
+     "Bóng đèn",
+     "Halogen 50W, chỉnh độ sáng"
+    ],
+    [
+     "Hẹn giờ",
+     "2 / 4 / 8 giờ"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Đi kèm nến thơm thành bộ quà tân gia, kỷ niệm rất sang.",
+   "engrave": false,
+   "sold": 644,
+   "variants": [
+    {
+     "sku": "SN-005-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 25,
+     "images": [
+      "images/sn-005-kem-1.svg",
+      "images/sn-005-kem-2.svg",
+      "images/sn-005-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-005-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 4,
+     "images": [
+      "images/sn-005-sage-1.svg",
+      "images/sn-005-sage-2.svg",
+      "images/sn-005-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-005-MAN",
+     "name": "Mận",
+     "hex": "#5A2A4F",
+     "stock": 2,
+     "images": [
+      "images/sn-005-man-1.svg",
+      "images/sn-005-man-2.svg",
+      "images/sn-005-man-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-006",
+   "slug": "nen-thom-hoa-nhai-tra-trang-200g",
+   "name": "Nến thơm hoa nhài & trà trắng 200g",
+   "en": "Jasmine & white tea candle",
+   "cat": "nha-cua",
+   "price": 219000,
+   "compare": null,
+   "badge": "MOST LOVED",
+   "rec": [
+    "gia-dinh",
+    "nguoi-yeu",
+    "ban-than"
+   ],
+   "occ": [
+    "cam-on",
+    "ky-niem",
+    "tu-thuong"
+   ],
+   "rating": 4.9,
+   "reviews": 354,
+   "hl": [
+    "Sáp đậu nành, bấc cotton, cháy khoảng 40 giờ",
+    "Hương hoa nhài & trà trắng, dịu và sạch",
+    "Hũ thủy tinh dùng lại làm cốc cắm bút"
+   ],
+   "desc": "Hương hoa cỏ là nhóm mùi được yêu thích nhất ở nến thơm. Bản 200g đổ thủ công tại Việt Nam, nhãn màu đổi theo phiên bản.",
+   "specs": [
+    [
+     "Khối lượng",
+     "200 g"
+    ],
+    [
+     "Thời gian cháy",
+     "Khoảng 40 giờ"
+    ],
+    [
+     "Hương",
+     "Hoa nhài, trà trắng"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Quà an toàn cho mọi dịp, ai nhận cũng dùng được.",
+   "engrave": false,
+   "sold": 2209,
+   "variants": [
+    {
+     "sku": "SN-006-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 4,
+     "images": [
+      "images/sn-006-sage-1.svg",
+      "images/sn-006-sage-2.svg",
+      "images/sn-006-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-006-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 32,
+     "images": [
+      "images/sn-006-lilac-1.svg",
+      "images/sn-006-lilac-2.svg",
+      "images/sn-006-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-006-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 18,
+     "images": [
+      "images/sn-006-hong-ao-1.svg",
+      "images/sn-006-hong-ao-2.svg",
+      "images/sn-006-hong-ao-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-007",
+   "slug": "tui-tote-vai-nhung-tam",
+   "name": "Túi tote vải nhung tăm",
+   "en": "Corduroy tote bag",
+   "cat": "du-lich",
+   "price": 239000,
+   "compare": 279000,
+   "badge": "NEW FIND",
+   "rec": [
+    "ban-than",
+    "dong-nghiep"
+   ],
+   "occ": [
+    "tu-thuong",
+    "sinh-nhat"
+   ],
+   "rating": 4.7,
+   "reviews": 201,
+   "hl": [
+    "Nhung tăm mềm, đứng form, có khóa kéo",
+    "Ngăn trong để điện thoại, vừa laptop 13\"",
+    "Quai dài đeo vai thoải mái"
+   ],
+   "desc": "Nhung tăm là chất liệu được ưa chuộng cho túi và phụ kiện năm nay. Màu pastel dễ phối đi học, đi làm.",
+   "specs": [
+    [
+     "Kích thước",
+     "38 × 36 × 10 cm"
+    ],
+    [
+     "Chất liệu",
+     "Nhung tăm, lót canvas"
+    ],
+    [
+     "Khóa",
+     "Khóa kéo YKK"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Dùng mỗi ngày, càng dùng càng nhớ người tặng.",
+   "engrave": false,
+   "sold": 1308,
+   "variants": [
+    {
+     "sku": "SN-007-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 32,
+     "images": [
+      "images/sn-007-lilac-1.svg",
+      "images/sn-007-lilac-2.svg",
+      "images/sn-007-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-007-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 18,
+     "images": [
+      "images/sn-007-sage-1.svg",
+      "images/sn-007-sage-2.svg",
+      "images/sn-007-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-007-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 7,
+     "images": [
+      "images/sn-007-kem-1.svg",
+      "images/sn-007-kem-2.svg",
+      "images/sn-007-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-007-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 0,
+     "images": [
+      "images/sn-007-mist-1.svg",
+      "images/sn-007-mist-2.svg",
+      "images/sn-007-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-008",
+   "slug": "bo-hoa-len-moc-3-bong",
+   "name": "Bó hoa len móc 3 bông",
+   "en": "Crochet flower bouquet",
+   "cat": "qua-tang",
+   "price": 199000,
+   "compare": null,
+   "badge": "GIFT READY",
+   "rec": [
+    "nguoi-yeu",
+    "gia-dinh",
+    "ban-be"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "ky-niem",
+    "cam-on"
+   ],
+   "rating": 4.9,
+   "reviews": 145,
+   "hl": [
+    "Hoa không héo, giữ được nhiều năm",
+    "Móc tay, gói giấy kèm thiệp",
+    "Có thể chọn màu theo sở thích người nhận"
+   ],
+   "desc": "Hoa len móc là lựa chọn thay hoa tươi bền lâu, đang được tặng nhiều dịp 8/3, 20/10, Ngày của Mẹ và kỷ niệm.",
+   "specs": [
+    [
+     "Số bông",
+     "3 bông"
+    ],
+    [
+     "Chiều cao",
+     "30 cm"
+    ],
+    [
+     "Chất liệu",
+     "Sợi cotton, cành kẽm bọc"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Thay hoa tươi mà không lo héo sau vài ngày.",
+   "engrave": false,
+   "sold": 989,
+   "variants": [
+    {
+     "sku": "SN-008-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 18,
+     "images": [
+      "images/sn-008-hong-ao-1.svg",
+      "images/sn-008-hong-ao-2.svg",
+      "images/sn-008-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-008-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 7,
+     "images": [
+      "images/sn-008-lilac-1.svg",
+      "images/sn-008-lilac-2.svg",
+      "images/sn-008-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-008-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 0,
+     "images": [
+      "images/sn-008-kem-1.svg",
+      "images/sn-008-kem-2.svg",
+      "images/sn-008-kem-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-009",
+   "slug": "day-chuyen-mat-the-khac-ten",
+   "name": "Dây chuyền mặt thẻ khắc tên",
+   "en": "Engravable tag necklace",
+   "cat": "phu-kien",
+   "price": 249000,
+   "compare": null,
+   "badge": "SENOVA PICK",
+   "rec": [
+    "nguoi-yeu",
+    "ban-than",
+    "gia-dinh"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "ky-niem"
+   ],
+   "rating": 4.8,
+   "reviews": 129,
+   "hl": [
+    "Khắc miễn phí tối đa 8 ký tự",
+    "Thép không gỉ 316L, không xỉn màu",
+    "Hộp nhung + thiệp đi kèm"
+   ],
+   "desc": "Quà cá nhân hóa đang lên ngôi: một chiếc thẻ nhỏ khắc tên, ngày kỷ niệm hay một chữ chỉ hai người hiểu.",
+   "specs": [
+    [
+     "Chất liệu",
+     "Thép không gỉ 316L"
+    ],
+    [
+     "Dài dây",
+     "45 cm + 5 cm nối"
+    ],
+    [
+     "Khắc",
+     "Laser, tối đa 8 ký tự"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Không đụng hàng, vì chỉ có một chiếc mang chữ đó.",
+   "engrave": true,
+   "sold": 910,
+   "variants": [
+    {
+     "sku": "SN-009-BAC",
+     "name": "Bạc",
+     "hex": "#C9CFD6",
+     "stock": 7,
+     "images": [
+      "images/sn-009-bac-1.svg",
+      "images/sn-009-bac-2.svg",
+      "images/sn-009-bac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-009-VANG",
+     "name": "Vàng",
+     "hex": "#E3C27A",
+     "stock": 0,
+     "images": [
+      "images/sn-009-vang-1.svg",
+      "images/sn-009-vang-2.svg",
+      "images/sn-009-vang-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-010",
+   "slug": "so-365-ieu-nho-lam-ngay-vui-hon",
+   "name": "Sổ “365 điều nhỏ làm ngày vui hơn”",
+   "en": "365 little things journal",
+   "cat": "qua-tang",
+   "price": 129000,
+   "compare": null,
+   "badge": "SENOVA PICK",
+   "rec": [
+    "ban-be",
+    "dong-nghiep",
+    "ban-than"
+   ],
+   "occ": [
+    "vi-muon-tang",
+    "cam-on",
+    "sinh-nhat"
+   ],
+   "rating": 4.8,
+   "reviews": 176,
+   "hl": [
+    "Mỗi trang một gợi ý nhỏ để làm ngày vui hơn",
+    "Chừa chỗ ghi lại điều tốt mỗi ngày",
+    "Bìa vải, giấy kem 100gsm"
+   ],
+   "desc": "Sách quà tặng thông điệp tích cực là xu hướng quà nhỏ mà “làm việc gấp đôi”. Viết bằng tiếng Việt, dễ thương và không sến.",
+   "specs": [
+    [
+     "Số trang",
+     "384 trang"
+    ],
+    [
+     "Khổ",
+     "13 × 18 cm"
+    ],
+    [
+     "Giấy",
+     "Kem 100gsm"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Quà nhỏ nhưng người nhận mở ra mỗi ngày trong cả năm.",
+   "engrave": false,
+   "sold": 1209,
+   "variants": [
+    {
+     "sku": "SN-010-MAN",
+     "name": "Mận",
+     "hex": "#5A2A4F",
+     "stock": 12,
+     "images": [
+      "images/sn-010-man-1.svg",
+      "images/sn-010-man-2.svg",
+      "images/sn-010-man-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-010-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 25,
+     "images": [
+      "images/sn-010-sage-1.svg",
+      "images/sn-010-sage-2.svg",
+      "images/sn-010-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-010-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 4,
+     "images": [
+      "images/sn-010-mist-1.svg",
+      "images/sn-010-mist-2.svg",
+      "images/sn-010-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-011",
+   "slug": "hop-qua-little-box-theo-dip",
+   "name": "Hộp quà Little Box theo dịp",
+   "en": "Little Box gift set",
+   "cat": "qua-tang",
+   "price": 399000,
+   "compare": 459000,
+   "badge": "GIFT READY",
+   "rec": [
+    "ban-than",
+    "nguoi-yeu",
+    "ban-be",
+    "dong-nghiep"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "ky-niem",
+    "cam-on",
+    "vi-muon-tang"
+   ],
+   "rating": 4.9,
+   "reviews": 221,
+   "hl": [
+    "Gồm nến thơm mini, dây charm, sổ 365 và thiệp",
+    "Đai hộp đổi màu theo dịp tặng",
+    "Giao thẳng tới người nhận, ẩn giá"
+   ],
+   "desc": "Hộp quà theo mùa và theo dịp là nhóm hàng rất được ưa chuộng; Little Box được SENOVA phối sẵn, chỉ cần chọn dịp và viết lời nhắn.",
+   "specs": [
+    [
+     "Bao gồm",
+     "Nến mini, dây charm, sổ 365, thiệp"
+    ],
+    [
+     "Kích thước hộp",
+     "24 × 18 × 9 cm"
+    ],
+    [
+     "Gói quà",
+     "Có sẵn"
+    ],
+    [
+     "Xuất xứ",
+     "Phối tại Việt Nam"
+    ]
+   ],
+   "why": "Không cần nghĩ nhiều: một hộp, đủ đầy, đẹp ngay khi mở.",
+   "engrave": false,
+   "sold": 1496,
+   "variants": [
+    {
+     "sku": "SN-011-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 25,
+     "images": [
+      "images/sn-011-sage-1.svg",
+      "images/sn-011-sage-2.svg",
+      "images/sn-011-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-011-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 4,
+     "images": [
+      "images/sn-011-lilac-1.svg",
+      "images/sn-011-lilac-2.svg",
+      "images/sn-011-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-011-VANG-NANG",
+     "name": "Vàng nắng",
+     "hex": "#FFC23D",
+     "stock": 32,
+     "images": [
+      "images/sn-011-vang-nang-1.svg",
+      "images/sn-011-vang-nang-2.svg",
+      "images/sn-011-vang-nang-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-012",
+   "slug": "en-ngu-am-may",
+   "name": "Đèn ngủ đám mây",
+   "en": "Cloud night light",
+   "cat": "nha-cua",
+   "price": 189000,
+   "compare": null,
+   "badge": "HIDDEN GEM",
+   "rec": [
+    "gia-dinh",
+    "ban-be"
+   ],
+   "occ": [
+    "vi-muon-tang",
+    "sinh-nhat"
+   ],
+   "rating": 4.7,
+   "reviews": 164,
+   "hl": [
+    "Ánh sáng dịu, 3 mức sáng, chạm để bật",
+    "Pin sạc dùng 8–12 giờ",
+    "Silicone mềm, an toàn cho trẻ"
+   ],
+   "desc": "Đèn ngủ hình đám mây cho góc phòng ấm áp; ánh sáng vàng dịu không chói mắt, hợp đặt đầu giường hoặc kệ sách.",
+   "specs": [
+    [
+     "Kích thước",
+     "18 × 12 × 14 cm"
+    ],
+    [
+     "Pin",
+     "1200 mAh, sạc USB-C"
+    ],
+    [
+     "Chất liệu",
+     "Silicone, ABS"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Quà cho người hay thức khuya hoặc bé nhỏ trong nhà.",
+   "engrave": false,
+   "sold": 1171,
+   "variants": [
+    {
+     "sku": "SN-012-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 4,
+     "images": [
+      "images/sn-012-kem-1.svg",
+      "images/sn-012-kem-2.svg",
+      "images/sn-012-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-012-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 32,
+     "images": [
+      "images/sn-012-lilac-1.svg",
+      "images/sn-012-lilac-2.svg",
+      "images/sn-012-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-012-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 18,
+     "images": [
+      "images/sn-012-mist-1.svg",
+      "images/sn-012-mist-2.svg",
+      "images/sn-012-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-013",
+   "slug": "kep-toc-cang-cua-van-oi-moi",
+   "name": "Kẹp tóc càng cua vân đồi mồi",
+   "en": "Tortoiseshell claw clip",
+   "cat": "phu-kien",
+   "price": 79000,
+   "compare": null,
+   "badge": null,
+   "rec": [
+    "ban-than",
+    "ban-be"
+   ],
+   "occ": [
+    "tu-thuong",
+    "vi-muon-tang"
+   ],
+   "rating": 4.6,
+   "reviews": 298,
+   "hl": [
+    "Acetate bóng, vân đồi mồi tự nhiên",
+    "Lò xo chắc, kẹp tóc dày không tuột",
+    "Dài 10 cm"
+   ],
+   "desc": "Món nhỏ giá mềm, dễ mua kèm để đủ freeship hoặc tặng kèm hộp quà.",
+   "specs": [
+    [
+     "Dài",
+     "10 cm"
+    ],
+    [
+     "Chất liệu",
+     "Acetate"
+    ],
+    [
+     "Xuất xứ",
+     "Hàn Quốc"
+    ]
+   ],
+   "why": "Món “thêm vào giỏ” dễ thương, ai cũng cần.",
+   "engrave": false,
+   "sold": 1992,
+   "variants": [
+    {
+     "sku": "SN-013-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 32,
+     "images": [
+      "images/sn-013-hong-ao-1.svg",
+      "images/sn-013-hong-ao-2.svg",
+      "images/sn-013-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-013-NAU",
+     "name": "Nâu",
+     "hex": "#B07A4F",
+     "stock": 18,
+     "images": [
+      "images/sn-013-nau-1.svg",
+      "images/sn-013-nau-2.svg",
+      "images/sn-013-nau-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-013-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 7,
+     "images": [
+      "images/sn-013-sage-1.svg",
+      "images/sn-013-sage-2.svg",
+      "images/sn-013-sage-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-014",
+   "slug": "vi-the-khac-chu",
+   "name": "Ví thẻ khắc chữ",
+   "en": "Engravable card holder",
+   "cat": "phu-kien",
+   "price": 199000,
+   "compare": 239000,
+   "badge": "MOST LOVED",
+   "rec": [
+    "dong-nghiep",
+    "nguoi-yeu",
+    "gia-dinh"
+   ],
+   "occ": [
+    "ky-niem",
+    "cam-on",
+    "sinh-nhat"
+   ],
+   "rating": 4.8,
+   "reviews": 187,
+   "hl": [
+    "Khắc miễn phí tối đa 8 ký tự",
+    "4 ngăn thẻ + ngăn giữa để tiền",
+    "Da PU mềm, mỏng 6 mm"
+   ],
+   "desc": "Ví thẻ mỏng nhẹ cho người dùng thẻ là chính; khắc tên viết tắt biến món phụ kiện thành quà riêng.",
+   "specs": [
+    [
+     "Kích thước",
+     "10 × 7 cm"
+    ],
+    [
+     "Chất liệu",
+     "Da PU"
+    ],
+    [
+     "Khắc",
+     "Laser, tối đa 8 ký tự"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Quà cho anh, cho bố, cho đồng nghiệp nam đều “an toàn”.",
+   "engrave": true,
+   "sold": 1343,
+   "variants": [
+    {
+     "sku": "SN-014-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 18,
+     "images": [
+      "images/sn-014-mist-1.svg",
+      "images/sn-014-mist-2.svg",
+      "images/sn-014-mist-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-014-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 7,
+     "images": [
+      "images/sn-014-sage-1.svg",
+      "images/sn-014-sage-2.svg",
+      "images/sn-014-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-014-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 0,
+     "images": [
+      "images/sn-014-kem-1.svg",
+      "images/sn-014-kem-2.svg",
+      "images/sn-014-kem-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-015",
+   "slug": "chau-sen-a-mini-e-ban",
+   "name": "Chậu sen đá mini để bàn",
+   "en": "Mini succulent desk pot",
+   "cat": "nha-cua",
+   "price": 129000,
+   "compare": null,
+   "badge": "NEW FIND",
+   "rec": [
+    "dong-nghiep",
+    "gia-dinh",
+    "ban-be"
+   ],
+   "occ": [
+    "cam-on",
+    "vi-muon-tang"
+   ],
+   "rating": 4.8,
+   "reviews": 203,
+   "hl": [
+    "Cây thật, dễ sống, tưới 1 lần/tuần",
+    "Chậu gốm men mờ kèm đĩa lót",
+    "Kèm thẻ hướng dẫn chăm cây"
+   ],
+   "desc": "Chậu cây nhỏ để bàn là quà 20/10 quen thuộc cho đồng nghiệp: trang trí góc làm việc và mang lại cảm giác thư giãn.",
+   "specs": [
+    [
+     "Kích thước",
+     "Ø 9 × 12 cm"
+    ],
+    [
+     "Chất liệu chậu",
+     "Gốm men mờ"
+    ],
+    [
+     "Cây",
+     "Sen đá thật"
+    ],
+    [
+     "Xuất xứ",
+     "Đà Lạt, Việt Nam"
+    ]
+   ],
+   "why": "Quà nhỏ cho cả phòng, mỗi người một chậu vẫn vừa ngân sách.",
+   "engrave": false,
+   "sold": 1456,
+   "variants": [
+    {
+     "sku": "SN-015-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 7,
+     "images": [
+      "images/sn-015-kem-1.svg",
+      "images/sn-015-kem-2.svg",
+      "images/sn-015-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-015-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 0,
+     "images": [
+      "images/sn-015-hong-ao-1.svg",
+      "images/sn-015-hong-ao-2.svg",
+      "images/sn-015-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-015-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 25,
+     "images": [
+      "images/sn-015-mist-1.svg",
+      "images/sn-015-mist-2.svg",
+      "images/sn-015-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-016",
+   "slug": "day-chuyen-ngoc-trai-nuoc-ngot",
+   "name": "Dây chuyền ngọc trai nước ngọt",
+   "en": "Freshwater pearl necklace",
+   "cat": "phu-kien",
+   "price": 299000,
+   "compare": 369000,
+   "badge": "GIFT READY",
+   "rec": [
+    "gia-dinh",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "ky-niem",
+    "cam-on",
+    "sinh-nhat"
+   ],
+   "rating": 4.9,
+   "reviews": 118,
+   "hl": [
+    "Ngọc trai nước ngọt, khóa bạc 925",
+    "Dài 42 cm, mặt ngọc giọt nước",
+    "Hộp nhung + giấy chứng nhận"
+   ],
+   "desc": "Ngọc trai là lựa chọn tao nhã, cổ điển để tặng mẹ dịp 20/10; bản giọt nước nhỏ đeo hằng ngày không bị cầu kỳ.",
+   "specs": [
+    [
+     "Ngọc",
+     "Nước ngọt 6–7 mm"
+    ],
+    [
+     "Khóa",
+     "Bạc 925"
+    ],
+    [
+     "Dài",
+     "42 cm"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Món quà cho mẹ “đeo được mỗi ngày”.",
+   "engrave": false,
+   "sold": 963,
+   "variants": [
+    {
+     "sku": "SN-016-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 12,
+     "images": [
+      "images/sn-016-kem-1.svg",
+      "images/sn-016-kem-2.svg",
+      "images/sn-016-kem-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-017",
+   "slug": "hop-com-giu-nhiet-3-tang",
+   "name": "Hộp cơm giữ nhiệt 3 tầng",
+   "en": "3-tier insulated lunch box",
+   "cat": "nha-cua",
+   "price": 249000,
+   "compare": null,
+   "badge": "MOST LOVED",
+   "rec": [
+    "dong-nghiep",
+    "gia-dinh"
+   ],
+   "occ": [
+    "cam-on",
+    "tu-thuong"
+   ],
+   "rating": 4.7,
+   "reviews": 264,
+   "hl": [
+    "Giữ ấm 4–6 giờ, 3 ngăn riêng",
+    "Inox 304 bên trong, vỏ nhựa PP an toàn",
+    "Túi xách vải đi kèm"
+   ],
+   "desc": "Hộp cơm giữ nhiệt là quà thiết thực cho đồng nghiệp mang cơm đi làm; 3 tầng gọn trong túi xách.",
+   "specs": [
+    [
+     "Dung tích",
+     "3 × 450 ml"
+    ],
+    [
+     "Chất liệu",
+     "Inox 304, nhựa PP"
+    ],
+    [
+     "Giữ ấm",
+     "4–6 giờ"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Ngày nào cũng dùng, ngày nào cũng nhớ người tặng.",
+   "engrave": false,
+   "sold": 1856,
+   "variants": [
+    {
+     "sku": "SN-017-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 25,
+     "images": [
+      "images/sn-017-sage-1.svg",
+      "images/sn-017-sage-2.svg",
+      "images/sn-017-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-017-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 4,
+     "images": [
+      "images/sn-017-lilac-1.svg",
+      "images/sn-017-lilac-2.svg",
+      "images/sn-017-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-017-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 32,
+     "images": [
+      "images/sn-017-mist-1.svg",
+      "images/sn-017-mist-2.svg",
+      "images/sn-017-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-018",
+   "slug": "op-lung-ien-thoai-hoa-nhi",
+   "name": "Ốp lưng điện thoại hoa nhí",
+   "en": "Floral phone case",
+   "cat": "phu-kien",
+   "price": 99000,
+   "compare": null,
+   "badge": null,
+   "rec": [
+    "ban-than",
+    "ban-be",
+    "nguoi-yeu"
+   ],
+   "occ": [
+    "vi-muon-tang",
+    "sinh-nhat"
+   ],
+   "rating": 4.6,
+   "reviews": 342,
+   "hl": [
+    "Silicone mềm, viền camera nhô chống trầy",
+    "Có lỗ treo charm",
+    "Chọn đời máy ở bước thanh toán"
+   ],
+   "desc": "Ốp lưng là món quà “nhỏ mà có võ”, đặc biệt khi đi kèm dây charm cùng tông.",
+   "specs": [
+    [
+     "Chất liệu",
+     "Silicone, lót nhung"
+    ],
+    [
+     "Đời máy",
+     "iPhone 12–17, Samsung S/A (chọn khi đặt)"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Kết hợp với dây charm thành bộ quà phụ kiện điện thoại.",
+   "engrave": false,
+   "sold": 2341,
+   "variants": [
+    {
+     "sku": "SN-018-LILAC",
+     "name": "Lilac",
+     "hex": "#CBB6D6",
+     "stock": 4,
+     "images": [
+      "images/sn-018-lilac-1.svg",
+      "images/sn-018-lilac-2.svg",
+      "images/sn-018-lilac-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-018-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 32,
+     "images": [
+      "images/sn-018-hong-ao-1.svg",
+      "images/sn-018-hong-ao-2.svg",
+      "images/sn-018-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-018-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 18,
+     "images": [
+      "images/sn-018-sage-1.svg",
+      "images/sn-018-sage-2.svg",
+      "images/sn-018-sage-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-018-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 7,
+     "images": [
+      "images/sn-018-mist-1.svg",
+      "images/sn-018-mist-2.svg",
+      "images/sn-018-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-019",
+   "slug": "bo-hoa-huong-duong-len",
+   "name": "Bó hoa hướng dương len",
+   "en": "Crochet sunflower bouquet",
+   "cat": "qua-tang",
+   "price": 229000,
+   "compare": null,
+   "badge": "GIFT READY",
+   "rec": [
+    "dong-nghiep",
+    "gia-dinh",
+    "ban-be"
+   ],
+   "occ": [
+    "cam-on",
+    "ky-niem",
+    "sinh-nhat"
+   ],
+   "rating": 4.9,
+   "reviews": 156,
+   "hl": [
+    "2 bông hướng dương móc tay, không héo",
+    "Giấy gói và thiệp đi kèm",
+    "Ý nghĩa: lạc quan, biết ơn"
+   ],
+   "desc": "Hướng dương là loài hoa được chọn nhiều để tặng đồng nghiệp nữ dịp 20/10; bản len giữ được lâu như một món trang trí.",
+   "specs": [
+    [
+     "Số bông",
+     "2 bông"
+    ],
+    [
+     "Chiều cao",
+     "32 cm"
+    ],
+    [
+     "Chất liệu",
+     "Sợi cotton"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Tươi tắn như hoa thật, để bàn làm việc cả năm.",
+   "engrave": false,
+   "sold": 1242,
+   "variants": [
+    {
+     "sku": "SN-019-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 32,
+     "images": [
+      "images/sn-019-kem-1.svg",
+      "images/sn-019-kem-2.svg",
+      "images/sn-019-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-019-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 18,
+     "images": [
+      "images/sn-019-mist-1.svg",
+      "images/sn-019-mist-2.svg",
+      "images/sn-019-mist-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-020",
+   "slug": "khung-anh-go-e-ban-khac-ngay",
+   "name": "Khung ảnh gỗ để bàn khắc ngày",
+   "en": "Engraved wooden photo frame",
+   "cat": "qua-tang",
+   "price": 159000,
+   "compare": null,
+   "badge": "SENOVA PICK",
+   "rec": [
+    "nguoi-yeu",
+    "gia-dinh",
+    "ban-than"
+   ],
+   "occ": [
+    "ky-niem",
+    "sinh-nhat"
+   ],
+   "rating": 4.8,
+   "reviews": 97,
+   "hl": [
+    "Gỗ thông tự nhiên, khung 13 × 18",
+    "Khắc ngày hoặc tên miễn phí",
+    "In ảnh của bạn: gửi ảnh qua chat sau khi đặt"
+   ],
+   "desc": "Khung ảnh khắc ngày kỷ niệm biến một tấm ảnh chung thành món quà đặc biệt.",
+   "specs": [
+    [
+     "Khung",
+     "13 × 18 cm"
+    ],
+    [
+     "Chất liệu",
+     "Gỗ thông, mặt kính"
+    ],
+    [
+     "Khắc",
+     "Laser, tối đa 8 ký tự"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Giữ lại một khoảnh khắc chỉ hai người có.",
+   "engrave": true,
+   "sold": 905,
+   "variants": [
+    {
+     "sku": "SN-020-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 18,
+     "images": [
+      "images/sn-020-kem-1.svg",
+      "images/sn-020-kem-2.svg",
+      "images/sn-020-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-020-NAU",
+     "name": "Nâu",
+     "hex": "#B07A4F",
+     "stock": 7,
+     "images": [
+      "images/sn-020-nau-1.svg",
+      "images/sn-020-nau-2.svg",
+      "images/sn-020-nau-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-021",
+   "slug": "hop-nhac-go-quay-tay",
+   "name": "Hộp nhạc gỗ quay tay",
+   "en": "Wooden hand-crank music box",
+   "cat": "qua-tang",
+   "price": 189000,
+   "compare": 229000,
+   "badge": "HIDDEN GEM",
+   "rec": [
+    "nguoi-yeu",
+    "ban-than"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "ky-niem",
+    "vi-muon-tang"
+   ],
+   "rating": 4.8,
+   "reviews": 88,
+   "hl": [
+    "Quay tay phát giai điệu “Happy Birthday”",
+    "Gỗ tự nhiên, bánh răng kim loại",
+    "Nhỏ gọn để bàn"
+   ],
+   "desc": "Một món quà có âm thanh, mở ra là nhớ người tặng.",
+   "specs": [
+    [
+     "Kích thước",
+     "7 × 5 × 4 cm"
+    ],
+    [
+     "Chất liệu",
+     "Gỗ, kim loại"
+    ],
+    [
+     "Giai điệu",
+     "Happy Birthday"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Bất ngờ nhỏ khiến người nhận mỉm cười.",
+   "engrave": false,
+   "sold": 868,
+   "variants": [
+    {
+     "sku": "SN-021-NAU",
+     "name": "Nâu",
+     "hex": "#B07A4F",
+     "stock": 7,
+     "images": [
+      "images/sn-021-nau-1.svg",
+      "images/sn-021-nau-2.svg",
+      "images/sn-021-nau-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-021-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 0,
+     "images": [
+      "images/sn-021-kem-1.svg",
+      "images/sn-021-kem-2.svg",
+      "images/sn-021-kem-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-022",
+   "slug": "gia-o-ien-thoai-tu-tinh",
+   "name": "Giá đỡ điện thoại từ tính",
+   "en": "Magnetic phone stand",
+   "cat": "phu-kien",
+   "price": 149000,
+   "compare": null,
+   "badge": "NEW FIND",
+   "rec": [
+    "dong-nghiep",
+    "ban-be"
+   ],
+   "occ": [
+    "tu-thuong",
+    "cam-on"
+   ],
+   "rating": 4.7,
+   "reviews": 211,
+   "hl": [
+    "Hít nam châm, xoay 360°",
+    "Đế nặng chống đổ, nhôm anodized",
+    "Dùng tốt cho họp online, xem video"
+   ],
+   "desc": "Phụ kiện bàn làm việc gọn, đẹp và hữu ích mỗi ngày.",
+   "specs": [
+    [
+     "Chất liệu",
+     "Nhôm, silicone"
+    ],
+    [
+     "Tương thích",
+     "Điện thoại có MagSafe hoặc kèm miếng dán"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Quà cho người làm việc tại bàn nhiều giờ.",
+   "engrave": false,
+   "sold": 1623,
+   "variants": [
+    {
+     "sku": "SN-022-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 12,
+     "images": [
+      "images/sn-022-kem-1.svg",
+      "images/sn-022-kem-2.svg",
+      "images/sn-022-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-022-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 25,
+     "images": [
+      "images/sn-022-mist-1.svg",
+      "images/sn-022-mist-2.svg",
+      "images/sn-022-mist-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-022-SAGE",
+     "name": "Sage",
+     "hex": "#9DB39A",
+     "stock": 4,
+     "images": [
+      "images/sn-022-sage-1.svg",
+      "images/sn-022-sage-2.svg",
+      "images/sn-022-sage-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-023",
+   "slug": "gau-bong-len-be-sua",
+   "name": "Gấu bông len “Bé Sữa”",
+   "en": "Knit teddy “Be Sua”",
+   "cat": "qua-tang",
+   "price": 199000,
+   "compare": null,
+   "badge": "MOST LOVED",
+   "rec": [
+    "nguoi-yeu",
+    "ban-be",
+    "gia-dinh"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "vi-muon-tang",
+    "ky-niem"
+   ],
+   "rating": 4.9,
+   "reviews": 301,
+   "hl": [
+    "Lông len mềm, nhồi bông đàn hồi",
+    "Khăn quàng mận + tia sáng SENOVA",
+    "Cao 25 cm, vừa ôm"
+   ],
+   "desc": "Gấu bông vẫn là quà “mềm lòng” cho người thương; Bé Sữa là nhân vật riêng của SENOVA.",
+   "specs": [
+    [
+     "Chiều cao",
+     "25 cm"
+    ],
+    [
+     "Chất liệu",
+     "Len polyester, bông PP"
+    ],
+    [
+     "Giặt",
+     "Giặt tay nhẹ"
+    ],
+    [
+     "Xuất xứ",
+     "Việt Nam"
+    ]
+   ],
+   "why": "Ôm là thấy dễ chịu, hợp với mọi dịp.",
+   "engrave": false,
+   "sold": 2180,
+   "variants": [
+    {
+     "sku": "SN-023-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 25,
+     "images": [
+      "images/sn-023-kem-1.svg",
+      "images/sn-023-kem-2.svg",
+      "images/sn-023-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-023-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 4,
+     "images": [
+      "images/sn-023-hong-ao-1.svg",
+      "images/sn-023-hong-ao-2.svg",
+      "images/sn-023-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-023-NAU",
+     "name": "Nâu",
+     "hex": "#B07A4F",
+     "stock": 32,
+     "images": [
+      "images/sn-023-nau-1.svg",
+      "images/sn-023-nau-2.svg",
+      "images/sn-023-nau-3.svg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sn-024",
+   "slug": "guong-led-e-ban",
+   "name": "Gương LED để bàn",
+   "en": "LED vanity mirror",
+   "cat": "nha-cua",
+   "price": 279000,
+   "compare": 329000,
+   "badge": null,
+   "rec": [
+    "nguoi-yeu",
+    "ban-than",
+    "gia-dinh"
+   ],
+   "occ": [
+    "sinh-nhat",
+    "ky-niem"
+   ],
+   "rating": 4.7,
+   "reviews": 176,
+   "hl": [
+    "18 bóng LED, 3 màu ánh sáng",
+    "Cảm ứng chỉnh sáng, sạc USB-C",
+    "Gập gọn, xoay 180°"
+   ],
+   "desc": "Gương trang điểm có đèn cho góc bàn trang điểm nhỏ; ánh sáng đều giúp trang điểm chuẩn màu.",
+   "specs": [
+    [
+     "Đường kính",
+     "20 cm"
+    ],
+    [
+     "Pin",
+     "1200 mAh"
+    ],
+    [
+     "Ánh sáng",
+     "Trắng, vàng, trung tính"
+    ],
+    [
+     "Xuất xứ",
+     "Trung Quốc"
+    ]
+   ],
+   "why": "Quà “làm đẹp” không cần biết người nhận dùng mỹ phẩm gì.",
+   "engrave": false,
+   "sold": 1447,
+   "variants": [
+    {
+     "sku": "SN-024-KEM",
+     "name": "Kem",
+     "hex": "#F3EBDD",
+     "stock": 4,
+     "images": [
+      "images/sn-024-kem-1.svg",
+      "images/sn-024-kem-2.svg",
+      "images/sn-024-kem-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-024-HONG-AO",
+     "name": "Hồng đào",
+     "hex": "#F2B8C6",
+     "stock": 32,
+     "images": [
+      "images/sn-024-hong-ao-1.svg",
+      "images/sn-024-hong-ao-2.svg",
+      "images/sn-024-hong-ao-3.svg"
+     ]
+    },
+    {
+     "sku": "SN-024-MIST",
+     "name": "Mist",
+     "hex": "#C7D8E0",
+     "stock": 18,
+     "images": [
+      "images/sn-024-mist-1.svg",
+      "images/sn-024-mist-2.svg",
+      "images/sn-024-mist-3.svg"
+     ]
+    }
+   ]
+  }
+ ]
+}
