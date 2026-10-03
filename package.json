@@ -1,0 +1,9 @@
+{
+  "name": "senova-shop",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "contracts:gen": "pnpm --filter storefront contracts:gen",
+    "tokens:gen": "pnpm --filter storefront tokens:gen"
+  }
+}

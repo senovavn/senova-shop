@@ -1,0 +1,7 @@
+{
+  "name": "@senova/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "main": "senova.json",
+  "exports": { "./senova.json": "./senova.json" }
+}
