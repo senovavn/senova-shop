@@ -99,7 +99,7 @@
   },
   {
    "id": "sn-002",
-   "slug": "day-eo-ien-thoai-hat-charm",
+   "slug": "day-deo-dien-thoai-hat-charm",
    "name": "Dây đeo điện thoại hạt charm",
    "en": "Beaded phone charm strap",
    "cat": "phu-kien",
@@ -349,7 +349,7 @@
   },
   {
    "id": "sn-005",
-   "slug": "en-ham-nen-kieu-co-ien",
+   "slug": "den-ham-nen-kieu-co-dien",
    "name": "Đèn hâm nến kiểu cổ điển",
    "en": "Vintage candle warmer lamp",
    "cat": "nha-cua",
@@ -764,7 +764,7 @@
   },
   {
    "id": "sn-010",
-   "slug": "so-365-ieu-nho-lam-ngay-vui-hon",
+   "slug": "so-365-dieu-nho-lam-ngay-vui-hon",
    "name": "Sổ “365 điều nhỏ làm ngày vui hơn”",
    "en": "365 little things journal",
    "cat": "qua-tang",
@@ -934,7 +934,7 @@
   },
   {
    "id": "sn-012",
-   "slug": "en-ngu-am-may",
+   "slug": "den-ngu-dam-may",
    "name": "Đèn ngủ đám mây",
    "en": "Cloud night light",
    "cat": "nha-cua",
@@ -1016,7 +1016,7 @@
   },
   {
    "id": "sn-013",
-   "slug": "kep-toc-cang-cua-van-oi-moi",
+   "slug": "kep-toc-cang-cua-van-doi-moi",
    "name": "Kẹp tóc càng cua vân đồi mồi",
    "en": "Tortoiseshell claw clip",
    "cat": "phu-kien",
@@ -1178,7 +1178,7 @@
   },
   {
    "id": "sn-015",
-   "slug": "chau-sen-a-mini-e-ban",
+   "slug": "chau-sen-da-mini-de-ban",
    "name": "Chậu sen đá mini để bàn",
    "en": "Mini succulent desk pot",
    "cat": "nha-cua",
@@ -1404,7 +1404,7 @@
   },
   {
    "id": "sn-018",
-   "slug": "op-lung-ien-thoai-hoa-nhi",
+   "slug": "op-lung-dien-thoai-hoa-nhi",
    "name": "Ốp lưng điện thoại hoa nhí",
    "en": "Floral phone case",
    "cat": "phu-kien",
@@ -1567,7 +1567,7 @@
   },
   {
    "id": "sn-020",
-   "slug": "khung-anh-go-e-ban-khac-ngay",
+   "slug": "khung-anh-go-de-ban-khac-ngay",
    "name": "Khung ảnh gỗ để bàn khắc ngày",
    "en": "Engraved wooden photo frame",
    "cat": "qua-tang",
@@ -1711,7 +1711,7 @@
   },
   {
    "id": "sn-022",
-   "slug": "gia-o-ien-thoai-tu-tinh",
+   "slug": "gia-do-dien-thoai-tu-tinh",
    "name": "Giá đỡ điện thoại từ tính",
    "en": "Magnetic phone stand",
    "cat": "phu-kien",
@@ -1873,7 +1873,7 @@
   },
   {
    "id": "sn-024",
-   "slug": "guong-led-e-ban",
+   "slug": "guong-led-de-ban",
    "name": "Gương LED để bàn",
    "en": "LED vanity mirror",
    "cat": "nha-cua",

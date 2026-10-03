@@ -42,7 +42,7 @@ pnpm contracts:gen                    # sinh lại client từ openapi
 12. **Đo lường:** phát sự kiện thương mại chuẩn (view_item, add_to_cart, begin_checkout, add_shipping_info, add_payment_info, purchase) về SourceLiq; không gửi PII sang công cụ bên thứ ba.
 
 ## Quy ước
-- Code, commit tiếng Anh; chuỗi UI tiếng Việt qua `messages/vi.json` (khung `en.json`).
+- Code, commit tiếng Anh; chuỗi UI tiếng Việt qua `src/i18n/messages/vi.json` (khung `en.json`), gọi bằng `t()` trong `src/i18n/t.ts`.
 - Tiền hiển thị `149.000₫`; số dùng tabular; múi giờ `Asia/Ho_Chi_Minh`.
 - Địa chỉ Việt Nam 2 cấp: Tỉnh/Thành phố → Phường/Xã (danh mục lấy từ API, không hard-code).
 - Component đặt trong `src/components/<khu>/`; mỗi component có story/test khi có logic.
@@ -52,3 +52,12 @@ pnpm contracts:gen                    # sinh lại client từ openapi
 - Mỗi sprint dùng lệnh `/storefront-sprint <số>`; lập kế hoạch, chờ duyệt rồi mới code.
 - Trước khi báo xong: `test`, `e2e`, `lighthouse` xanh; chạy `/storefront-guardrails`.
 - Khi thiếu thông tin tích hợp (merchant, API key, tài khoản vận chuyển): dùng mock theo `INTEGRATIONS.md`, ghi rõ trong PR, không tự bịa thông số.
+
+## Ghi chú triển khai (Sprint 0)
+- Token: sửa `packages/tokens/senova.json` rồi `pnpm tokens:gen` → `src/styles/tokens.css` (`@theme` của Tailwind 4) + `src/components/brand/brand-svg.ts`. Không sửa tay file sinh ra; CI kiểm tra lệch.
+- API: `src/api/client.ts` (openapi-fetch). `STOREFRONT_API_MODE=mock` hoặc thiếu `STOREFRONT_API_BASE` → trả lời từ handler MSW trong `src/mocks/` qua `getResponse`, không vá `fetch` toàn cục. Ảnh mock phục vụ ở `/mock-media/*` (chỉ chế độ mock).
+- Next 16: `params`/`searchParams`/`cookies()` là async; `next/image` dùng `loading="eager"` + `fetchPriority="high"` thay cho `priority` (đã bỏ).
+- Header không đổi chiều cao khi cuộn (tránh CLS); hiệu ứng "co lại" làm bằng `transform` trên logo.
+
+## Next.js 16
+@AGENTS.md

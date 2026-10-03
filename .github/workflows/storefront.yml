@@ -1,0 +1,59 @@
+name: storefront
+
+on:
+  pull_request:
+    paths: ['apps/storefront/**', 'packages/tokens/**', 'openapi/**', 'fixtures/storefront/**', '.github/workflows/storefront.yml', 'pnpm-lock.yaml']
+  push:
+    branches: [main]
+    paths: ['apps/storefront/**', 'packages/tokens/**', 'openapi/**', 'fixtures/storefront/**', '.github/workflows/storefront.yml', 'pnpm-lock.yaml']
+
+concurrency:
+  group: storefront-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: apps/storefront
+    env:
+      STOREFRONT_API_MODE: mock
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Generated files are up to date
+        run: |
+          pnpm tokens:gen
+          pnpm contracts:gen
+          git diff --exit-code -- src/styles/tokens.css src/components/brand/brand-svg.ts src/api/schema.d.ts
+
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: E2E (1440 / 820 / 390)
+        run: pnpm e2e
+      - name: Lighthouse
+        run: pnpm lighthouse
+
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: storefront-reports
+          path: |
+            apps/storefront/playwright-report
+            apps/storefront/test-results
+            apps/storefront/.lighthouseci
+          retention-days: 14

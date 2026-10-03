@@ -1,5 +1,5 @@
 openapi: 3.1.0
-info: {title: SourceLiq Storefront API, version: 0.1.0, description: "Hợp đồng khởi điểm cho website SENOVA. Mở rộng theo docs/storefront/API_CONTRACT.md."}
+info: {title: SourceLiq Storefront API, version: 0.2.0, description: "Hợp đồng khởi điểm cho website SENOVA. Mở rộng theo docs/storefront/API_CONTRACT.md."}
 servers: [{url: https://api.sourceliq.vn/v1/storefront}]
 components:
   parameters:
@@ -10,7 +10,7 @@ components:
     Variant:
       type: object
       required: [sku, name, price, stock, images]
-      properties: {sku: {type: string}, name: {type: string}, hex: {type: string}, price: {$ref: '#/components/schemas/Money'}, compare_at: {$ref: '#/components/schemas/Money'}, stock: {type: integer}, images: {type: array, items: {type: string, format: uri}}}
+      properties: {sku: {type: string}, name: {type: string}, hex: {type: string}, price: {$ref: '#/components/schemas/Money'}, compare_at: {$ref: '#/components/schemas/Money'}, stock: {type: integer}, images: {type: array, items: {type: string, format: uri-reference}}}
     Product:
       type: object
       required: [id, slug, name, category, variants]
@@ -40,11 +40,34 @@ components:
       type: object
       properties: {code: {type: string}, status: {type: string, enum: [placed, confirmed, packing, handed_over, in_transit, delivered, cancelled]}, payment_status: {type: string, enum: [cod, pending, paid, failed, refunded]}, carrier: {type: string}, tracking_no: {type: string}, totals: {$ref: '#/components/schemas/Quote'}}
     Error: {type: object, required: [code, message], properties: {code: {type: string}, message: {type: string}, field: {type: string}}}
+    NavLink: {type: object, required: [label, href], properties: {label: {type: string}, href: {type: string}, highlight: {type: boolean}}}
+    Utility:
+      type: object
+      required: [key, label, enabled]
+      properties: {key: {type: string, enum: [event, flash, voucher, freeship, engrave, express, wrap, finder, track, chat]}, label: {type: string}, enabled: {type: boolean}, badge: {type: string}}
+    Occasion: {type: object, required: [key, label, date], properties: {key: {type: string}, label: {type: string}, name: {type: string}, date: {type: string, format: date}, hint: {type: string}, recipient: {type: string}}}
+    Config:
+      type: object
+      required: [brand, marquee, nav, footer, free_ship_threshold, utilities]
+      properties:
+        brand: {type: object, required: [name, tagline], properties: {name: {type: string}, tagline: {type: string}}}
+        marquee: {type: array, items: {type: string}}
+        nav: {type: array, items: {$ref: '#/components/schemas/NavLink'}}
+        footer:
+          type: object
+          required: [about, columns, legal]
+          properties:
+            about: {type: string}
+            columns: {type: array, items: {type: object, required: [title, links], properties: {title: {type: string}, links: {type: array, items: {$ref: '#/components/schemas/NavLink'}}}}}
+            legal: {type: string}
+        free_ship_threshold: {$ref: '#/components/schemas/Money'}
+        utilities: {type: array, items: {$ref: '#/components/schemas/Utility'}}
+        next_occasion: {$ref: '#/components/schemas/Occasion'}
 paths:
-  /config: {get: {parameters: [{$ref: '#/components/parameters/Host'}], responses: {'200': {description: Storefront config}}}}
+  /config: {get: {parameters: [{$ref: '#/components/parameters/Host'}], responses: {'200': {description: Storefront config, content: {application/json: {schema: {$ref: '#/components/schemas/Config'}}}}}}}
   /products:
     get:
-      parameters: [{$ref: '#/components/parameters/Host'}, {name: cat, in: query, schema: {type: string}}, {name: q, in: query, schema: {type: string}}, {name: sort, in: query, schema: {type: string, enum: [popular, rating, discount, price_asc, price_desc]}}, {name: cursor, in: query, schema: {type: string}}]
+      parameters: [{$ref: '#/components/parameters/Host'}, {name: cat, in: query, schema: {type: string}}, {name: coll, in: query, schema: {type: string}}, {name: q, in: query, schema: {type: string}}, {name: price_min, in: query, schema: {type: integer}}, {name: price_max, in: query, schema: {type: integer}}, {name: badge, in: query, schema: {type: string}}, {name: in_stock, in: query, schema: {type: boolean}}, {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 60}}, {name: sort, in: query, schema: {type: string, enum: [popular, rating, discount, price_asc, price_desc]}}, {name: cursor, in: query, schema: {type: string}}]
       responses: {'200': {description: OK, content: {application/json: {schema: {type: object, properties: {items: {type: array, items: {$ref: '#/components/schemas/Product'}}, next_cursor: {type: string}}}}}}}
   /products/{slug}: {get: {parameters: [{$ref: '#/components/parameters/Host'}, {name: slug, in: path, required: true, schema: {type: string}}], responses: {'200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/Product'}}}}, '404': {description: Not found}}}}
   /carts/{id}/items:
@@ -67,4 +90,4 @@ paths:
     post:
       parameters: [{$ref: '#/components/parameters/Host'}, {name: id, in: path, required: true, schema: {type: string}}]
       requestBody: {content: {application/json: {schema: {type: object, properties: {text: {type: string, maxLength: 1000}}}}}}
-      responses: {'200': {description: SSE stream of {reply, product_ids, actions}}}
+      responses: {'200': {description: 'SSE stream of {reply, product_ids, actions}'}}

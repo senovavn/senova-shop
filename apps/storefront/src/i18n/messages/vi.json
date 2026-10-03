@@ -1,0 +1,21 @@
+{
+  "a11y": { "skip": "Bỏ qua tới nội dung chính" },
+  "header": {
+    "menu": "Danh mục",
+    "search": "Tìm kiếm",
+    "searchPlaceholder": "Tìm ly giữ nhiệt, charm, nến…",
+    "wishlist": "Yêu thích",
+    "account": "Tài khoản",
+    "cart": "Giỏ hàng",
+    "home": "Trang chủ SENOVA",
+    "close": "Đóng"
+  },
+  "bottomNav": { "home": "Trang chủ", "categories": "Danh mục", "finder": "Tìm quà", "cart": "Giỏ hàng", "account": "Tài khoản" },
+  "home": {
+    "countdown": "Còn {days} ngày tới {occasion}",
+    "hotTitle": "Đang hot tuần này",
+    "hotSub": "Xếp theo lượt bán 7 ngày qua",
+    "sold": "{count} đã bán"
+  },
+  "notFound": { "title": "Trang này đang được SENOVA chuẩn bị", "body": "Bạn quay lại trang chủ để xem các món đang hot nhé.", "cta": "Về trang chủ" }
+}
