@@ -27,8 +27,18 @@ python3 -m http.server 8788 --directory site
 ```
 Mở http://localhost:8788. Thêm `?owner` để hiện bảng tải ảnh thật (`http://localhost:8788/?owner`).
 
-## Bước tiếp theo
-Chạy `claude` ở gốc repo, gõ `/storefront-sprint 0`.
+## Ứng dụng Next.js (`apps/storefront`)
+Cần Node 22+ và pnpm 9.
+```bash
+pnpm install
+cp apps/storefront/.env.example apps/storefront/.env.local   # mặc định chạy mock từ fixtures
+pnpm --filter storefront dev                                 # http://localhost:3000
+pnpm --filter storefront test                                # unit (Vitest)
+pnpm --filter storefront e2e                                 # Playwright 1440/820/390
+pnpm --filter storefront lighthouse                          # Lighthouse CI
+pnpm tokens:gen && pnpm contracts:gen                        # sinh lại token CSS và client OpenAPI
+```
+Tiến độ sprint: `docs/storefront/BUILD_PLAN.md`. Sprint tiếp theo: `/storefront-sprint 1`.
 
 ## Thay đổi so với prototype gốc (`site/index.html`)
 - Bỏ mã giảm giá thì mã không tự áp lại.

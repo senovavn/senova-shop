@@ -53,7 +53,7 @@ Tổng tiền chỉ lấy từ POST /checkout/{id}/quote. Viết e2e Playwright 
 ## Tiến độ
 | Sprint | Trạng thái | Ghi chú |
 |---|---|---|
-| 0 | Chưa bắt đầu | |
+| 0 | Xong (chờ duyệt PR) | Next.js 16.3 + Tailwind 4 từ token; mock MSW `getResponse` (không vá fetch toàn cục); unit 17/17, e2e 14/14 ở 1440/820/390; Lighthouse desktop 98/100/96/100, mobile 96/100/96/100 (LCP mobile 2,8 s do ảnh SVG demo có blur, xử lý ở Sprint 1). Header giữ chiều cao cố định khi cuộn (chỉ đổ bóng + thu logo bằng transform) để CLS = 0. |
 | 1 | | |
 | 2 | | |
 | 3 | | |
