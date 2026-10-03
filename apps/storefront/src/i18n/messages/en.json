@@ -1,0 +1,21 @@
+{
+  "a11y": { "skip": "Skip to main content" },
+  "header": {
+    "menu": "Categories",
+    "search": "Search",
+    "searchPlaceholder": "Search tumblers, charms, candles…",
+    "wishlist": "Wishlist",
+    "account": "Account",
+    "cart": "Cart",
+    "home": "SENOVA home",
+    "close": "Close"
+  },
+  "bottomNav": { "home": "Home", "categories": "Categories", "finder": "Gift finder", "cart": "Cart", "account": "Account" },
+  "home": {
+    "countdown": "{days} days until {occasion}",
+    "hotTitle": "Hot this week",
+    "hotSub": "Ranked by 7-day sales",
+    "sold": "{count} sold"
+  },
+  "notFound": { "title": "SENOVA is still preparing this page", "body": "Head back home to see what's hot.", "cta": "Back to home" }
+}
